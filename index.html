@@ -11,15 +11,7 @@
     <!-- <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script> -->
   </head>
   <body>
-    <!-- <nav>
-      <a href="#about"><p>A-propos</p></a>
-      <a href="#assets"><p>Technologie et robotique</p></a>
-      <a href="#uxui"><p>Réalité augmentée-virtuelle</p></a>
-      <a href="#development"><p>Développement-open_vision</p></a>
-      <a href="#visual"><p>Maintenance industrielle et automatisme</p></a>
-      <span id="content">Menu</span>
-    </nav> -->
-    
+        
     <div id="chapters">
     </div>
     <div id="maincontainer">
@@ -65,9 +57,12 @@
 
             <a-asset-item id="leftsneaker" src="./models/cube.obj"></a-asset-item>
             <img id="leftsneakertexture" src="./assets/bac-mavlog.png">
+            
+            <a-asset-item id="center" src="./models/RA-RV.obj"></a-asset-item>
           </a-assets>
 
           <!-- loading the assets inside the enviroment -->
+          <a-entity id="a-center" position="0 4.6 0" scale="2 2 2" rotation="0 0 0" obj-model="obj: #center"></a-entity>
           <a-entity id="a-surfboard5" position="0 2.6 0" scale="2 2 2" rotation="0 0 0" obj-model="obj: #surfboard5" material="src: #surfboard5Texture;"></a-entity>
           <a-entity id="a-schep" position="5 2.6 5" scale="2 2 2" rotation="0 0 0" obj-model="obj: #schep" material="src: #scheptexture"></a-entity>
           <a-entity id="a-rightsneaker" position="5 2.6 -5" scale="2 2 2" rotation="0 0 0" obj-model="obj: #rightsneaker" material="src: #rightsneakertexture"></a-entity>
@@ -118,7 +113,7 @@
             <p>
              Le Lycée Professionnel JULES VERNE est situé proche du centre ville d’Etaples et de sa gare .
              <br>
-            Dans un environnement agréable, il offre d’excellentes conditions de travail et de réussite à l’ensemble de ses 200 élèves en formation initiale, de ses 66 apprentis dans son UFA et de ses apprenants en formation continue du Gréta Grand Littoral.
+            
                <br>
             Le lycée, labellisé « lycée des métiers du bâtiment et des énergies renouvelables » 
             <br>  
@@ -137,14 +132,11 @@
 Les formations initiales proposées vont du CAP au BAC PRO sous statut scolaire et statut d’apprenti du CFA
   <p>
     <img src="./assets/borden5.png" class="img600">
-   <p>Of course surfboards aren't quite straight and I've warped them all a little bit:</p>
     <img src="./assets/kromboard1.png" class="img100">
-     <img src="./assets/kromboard2.png" class="img100">
+    <img src="./assets/kromboard2.png" class="img100">
        </p>
             <a class="cta" href="https://jules-verne-etaples.enthdf.fr/">LP JULES VERNE</a>
-          
-        
-
+      
        </div>
     </div>
 
