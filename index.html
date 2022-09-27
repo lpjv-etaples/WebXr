@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Guarim WEBVR</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+<script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+    <!-- <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script> -->
+  </head>
+  <body>
+    <!-- <nav>
+      <a href="#about"><p>A-propos</p></a>
+      <a href="#assets"><p>Technologie et robotique</p></a>
+      <a href="#uxui"><p>Réalité augmentée-virtuelle</p></a>
+      <a href="#development"><p>Développement-open_vision</p></a>
+      <a href="#visual"><p>Maintenance industrielle et automatisme</p></a>
+      <span id="content">Menu</span>
+    </nav> -->
+    
+    <div id="chapters">
+    </div>
+    <div id="maincontainer">
+      <div id="contentWidth">
+        <a-scene environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1;  dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  false" device-orientation-permission-ui="enabled: false" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+          <a-sky color="#ECECEC" material="" geometry=""></a-sky>
+
+          <!-- adding the camera to the scene -->
+          <!-- <a-entity animation="property: position; to: -10 1.6 0; loop: true; yoyo:true; dur: 10000;begin:onstart;" id="camera" camera look-controls position="0 1.8 0" mouse-cursor> -->
+          <!-- <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 100000; easing:	linear;" id="camera" camera position="0 1.8 0" mouse-cursor> -->
+          <a-entity
+                    id="camera"
+                    camera
+                    orbit-controls="
+                      autoRotate: true;
+                      enableDamping: false;
+                      rotateSpeed:1;
+                      target: 0 0 0;
+                      minDistance: 15;
+                      maxDistance: 50;
+                      initialPosition: 0 1.5 5.2"
+                      mouse-cursor=""
+                      position="0 0 0">
+                </a-entity>
+
+
+          <!-- adding assets to the program -->
+          <a-assets>
+
+            <a-asset-item id="surfboard5" src="./models/cube.obj"></a-asset-item>
+            <img id="surfboard5Texture" src="./assets/1.png">
+
+
+            <a-asset-item id="schep" src="./models/cube.obj"></a-asset-item>
+            <img id="scheptexture" src="./assets/2.png">
+
+
+            <a-asset-item id="shirt" src="./models/cube.obj"></a-asset-item>
+            <img id="shirttexture" src="./assets/3.png">
+
+            <a-asset-item id="rightsneaker" src="./models/cube.obj"></a-asset-item>
+            <img id="rightsneakertexture" src="./assets/4.png">
+
+            <a-asset-item id="leftsneaker" src="./models/cube.obj"></a-asset-item>
+            <img id="leftsneakertexture" src="./assets/5.png">
+          </a-assets>
+
+          <!-- loading the assets inside the enviroment -->
+          <a-entity id="a-surfboard5" position="0 2.6 0" scale="2 2 2" rotation="0 0 0" obj-model="obj: #surfboard5" material="src: #surfboard5Texture;"></a-entity>
+          <a-entity id="a-schep" position="5 2.6 5" scale="2 2 2" rotation="0 0 0" obj-model="obj: #schep" material="src: #scheptexture"></a-entity>
+          <a-entity id="a-rightsneaker" position="5 2.6 -5" scale="2 2 2" rotation="0 0 0" obj-model="obj: #rightsneaker" material="src: #rightsneakertexture"></a-entity>
+          <a-entity id="a-leftsneaker" position="-5 2.6 5" scale="2 2 2" rotation="0 0 0" obj-model="obj: #leftsneaker" material="src: #leftsneakertexture"></a-entity>
+          <a-entity id="a-shirt" position="-5 2.6 -5" scale="2 2 2" rotation="0 0 0" obj-model="obj: #shirt" material="src: #shirttexture"></a-entity>
+        </a-scene>
+
+        <section class="world3d" id="focusOnHome">
+          <span class="anchors" id="home"></span>
+          <div class="">
+            <h1>WEB Réalité virtuelle</h1>
+            <p>Par M GUARIM </p>
+          </div>
+          <a href="#about" class="cta">Information</a>
+        </section>
+
+        <section id="aboutcont">
+          <span class="anchors" id="about"></span>
+          <div class="textcontainer">
+
+            <h2>A Propos</h2>
+
+            <p>
+             -Professeur de Maintenance des Equipements Industriels
+               <br>
+             -Technologie et découverte professionnelle classe de 3ème Prépa-Met
+               <br>
+             -Formateur UFA Economie-gestion(apprentis métiers du bois et bâtiment)
+               <br>
+             -Formateur Greta (Titre pro CQP conducteur de systèmes automatisés) 
+              <br>
+             -Formateur et consultant pédagogique en réalité virtuelle et réalité augmentée
+               <br>
+
+              <br>
+              <br>
+              -Conception robotique industriel: Réalisation, fabrication, mise au point.
+               <br>
+                       
+              -Maintenance des systèmes automatisés.
+               <br>
+              -Programmation (automates industriels, Visual Basic, C, C++, Java, Javascript, HTML, CSS, Python, Android App)
+               <br>
+              -Informatique et réseaux.
+               <br>
+              -Vision par ordinateur (OpenCV).
+               <br>
+              -Réalité augmentée (A-Frame, Three.js, webxr).
+               <br>
+              -Intelligence artificielle (Tensorflow, Pytorch...)
+              <br>
+              
+              <br>
+              <br>
+              
+            </p>
+            <a class="cta" href="https://guarim.github.io/A-Frame-Examples/parametric-path-follow.html">Mon portfolio</a>
+
+            <h3>Pourquoi ai-je choisi le WebVR</h3>
+            <p>
+            Pationné par l'enseignement des nouvelles technologies . En recherche permanante sur les moyens d'utiliser la 3D, du webvr, de la vision par ordinateur en interaction avec le monde réel, 
+            </p>
+
+            <h3>Expériences</h3>
+            <p>
+              J'ai un peu d'expérience en développement, mais je souhaite principalement trouver toutes les applications possibles de ces technologies dans un environnement industriel. 
+              <br>
+              Détourner les différentes technologies (open-vision, webvr, A-frame, arduino) et développer des outils pour l'industrie.
+            </p>
+
+            <h3>Ma classe de développement de projet: 3Pmet</h3>
+            <p>
+             Les classes de 3e dites "prépa-métiers" ont pour vocation d'accompagner les élèves avec une pédagogie par projet dans la construction de leur d'orientation, en particulier vers la voie professionnelle. L’accent est mis sur la découverte des métiers et des formations, avec notamment des stages d’observation professionnels.
+              <br><br>
+              AU PROGRAMME :
+              Outre les enseignements généraux, 180 heures d’enseignement sont dédiées à la découverte professionnelle des métiers et des formations. À cela s’ajoutent entre 1 et 4 semaines de stages d’observation en milieu professionnel et périodes d’immersion dans les lycées professionnels ou les CFA.
+            </p>
+            <a class="cta" href="https://reality-shift.nl/">Check out our team</a>
+
+            <h4>Mon établissement</h4>
+            <p>
+             Le Lycée Professionnel JULES VERNE est situé proche du centre ville d’Etaples et de sa gare .
+             <br>
+            Dans un environnement agréable, il offre d’excellentes conditions de travail et de réussite à l’ensemble de ses 200 élèves en formation initiale, de ses 66 apprentis dans son UFA et de ses apprenants en formation continue du Gréta Grand Littoral.
+               <br>
+            Le lycée, labellisé « lycée des métiers du bâtiment et des énergies renouvelables » 
+            <br>  
+            Membre du CAMPUS des métiers et des Qualifications du Bâtiment et des Systèmes Energétiques Intelligents 3.0 (CMQ BSEI 3.0). 
+               <br>
+            Il promeut et équipe son EIP (Espace d’Innovation Partagée) en outils de réalité augmentée et réalité virtuelle. Des formations sont également assurées à destination des apprentis du CFA et des adultes du GRETA. 
+               <br>
+            L’établissement compte également deux pilotes de drone thermique qui montrent cette technologie à la formation du Titre Pro  ITE  (Isolation Thermique par l’Extérieur).
+ <br>
+♦ La famille des Métiers du Bâtiment, de l’énergie durable et des travaux publics avec la 2nde CDB et ses spécialités.
+               <br>
+♦ La famille des métiers de l’Agencement de la Menuiserie et de l’Ameublement avec la 2nde AMA et ses spécialités
+               <br>
+♦ La famille des Métiers de la Transition Numérique et Énergétique avec la 2nde TNE et ses spécialités
+ <br>
+Les formations initiales proposées vont du CAP au BAC PRO sous statut scolaire et statut d’apprenti du CFA
+  <p>
+    <img src="./assets/borden5.png" class="img600">
+   <p>Of course surfboards aren't quite straight and I've warped them all a little bit:</p>
+    <img src="./assets/kromboard1.png" class="img100">
+     <img src="./assets/kromboard2.png" class="img100">
+       </p>
+            <a class="cta" href="https://jules-verne-etaples.enthdf.fr/">LP JULES VERNE</a>
+          
+        
+
+       </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js" charset="utf-8"></script>
+  </body>
+</html>
