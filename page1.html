@@ -75,7 +75,8 @@
 											  
 	<a-entity position="0 0.4 0">
 
-		<a-entity id="sol" position="0 0.4 0" scale="0.5 0.5 0.5" rotation="90 90 90" obj-model="obj: #sol"></a-entity>
+		<a-entity id="sol" position="0 0.4 0" scale="0.4 0.4 0.4" rotation="90 90 90" obj-model="obj: #sol"></a-entity>
+		 curve-follow= "curveData: #helix2; type: parametric-curve; duration: 34; loop: true" >												   		
 						
 	</a-entity>
 
@@ -90,7 +91,7 @@
 			 id="jetModel" 
 			 scale="0.7 0.7 0.7"
 			 gltf-model="#jet"
-			 curve-follow= "curveData: #helix2; type: parametric-curve; duration: 80; loop: true" >
+			 curve-follow= "curveData: #helix; type: parametric-curve; duration: 34; loop: true" >
 		
 		</a-entity>
 		
