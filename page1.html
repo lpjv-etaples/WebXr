@@ -29,6 +29,12 @@
 	</a-assets>
 	
 	<a-assets>
+		<a-asset-item id="sol" src="models/Barytine.glb"></a-asset-item>
+	</a-assets>
+	
+	
+	
+	<a-assets>
           <img id="logo" src="assets/cap-mi.png">
 	  <img id="im"  src="assets/cap-par.png">
 	  <img id="im1"  src="assets/mac.png">
@@ -65,11 +71,22 @@
 	<a-entity id="helix2"
 		parametric-curve="xyzFunctions: 3*cos(t), 0.3*t, 2*sin(t); tRange: 0, 35;">
 	</a-entity>
-
+											  
 	<a-entity position="0 0 0">
 
 		<a-entity 
-			tube-geometry="curveData: #helix2; type: parametric-curve; tubeSegments: 200; radius: 0.0; tubeColor: red;" >
+			 id="sol" 
+			 scale="1 1 1"
+			 gltf-model="#sol"
+			 		
+		</a-entity>
+		
+	</a-entity>
+
+	<a-entity position="0 1 0">
+
+		<a-entity 
+			tube-geometry="curveData: #helix2; type: parametric-curve; tubeSegments: 200; radius: 0.001; tubeColor: red;" >
 		</a-entity>
 				
 		<a-entity 
