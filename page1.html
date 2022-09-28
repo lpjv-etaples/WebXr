@@ -37,6 +37,7 @@
 	
 	<a-assets>
           <img id="logo" src="video/1.mp4">
+	  <img id="logo1 src="assets/1.png">
 	  <img id="im"  src="assets/cap-par.png">
 	  <img id="im1"  src="assets/mac.png">
 	  <img id="im2"  src="assets/cap-mbc.png">
@@ -60,7 +61,7 @@
 	
 		
 	<a-entity id="helix"
-		parametric-curve="xyzFunctions: 11*cos(t), 2.6*cos(2*t) + 2, 11*sin(t); 
+		parametric-curve="xyzFunctions: 11*cos(t), 2*cos(2*t) + 2, 11*sin(t); 
 			   			  tRange: 0, 8;">
 	</a-entity>
 	
@@ -106,7 +107,7 @@
 				
 		
 		<a-image
-			 src="logo" 
+			 src="logo1" 
 			 delay
 			 width="10" height="5"
 			 position="0 -2 -6"
@@ -116,6 +117,26 @@
 			 >
 			<a-link href="portal-default.html"  scale="1 1 1" image="#im"></a-link>
 		</a-image>
+		
+	</a-entity>
+	<a-entity position="0 2 0">
+
+		<a-entity 
+			tube-geometry="curveData: #helix; type: parametric-curve; tubeSegments: 200; radius: 0.0; tubeColor: yellow;" >
+		</a-entity>
+				
+		
+		<a-video
+			 src="logo" 
+			 delay
+			 width="10" height="5"
+			 position="0 -2 -6"
+			 rotation="0 0 0"
+			 scale="0.5 0.6 0.5" 
+			 curve-follow= "curveData: #helix; type: parametric-curve; duration: 46; loop: true" 
+			 >
+			
+		</a-video>
 		
 	</a-entity>
 	
