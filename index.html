@@ -63,7 +63,8 @@
           </a-assets>
           
           <a-assets>
-		<a-asset-item id="jet" src="models/drone.glb"></a-asset-item>
+		<a-asset-item id="jet" src="models/scene.gltf"></a-asset-item>
+		<img id="jvtexture" src="./assets/texture/material_0_baseColor.png">
 	  </a-assets>
 
           <!-- loading the assets inside the enviroment -->
@@ -74,7 +75,7 @@
           <a-entity id="a-rightsneaker" position="5 2.6 -5" scale="2 2 2" rotation="0 0 0" obj-model="obj: #rightsneaker" material="src: #rightsneakertexture"></a-entity>
           <a-entity id="a-leftsneaker" position="-5 2.6 5" scale="2 2 2" rotation="0 0 0" obj-model="obj: #leftsneaker" material="src: #leftsneakertexture"></a-entity>
           <a-entity id="a-shirt" position="-5 2.6 -5" scale="2 2 2" rotation="0 0 0" obj-model="obj: #shirt" material="src: #shirttexture"></a-entity>
-	  <a-entity id="sol" scale="0.1 0.1 0.1" position="0 3.5 0" rotation="0 0 0" obj-model="OBJ: #sol" ></a-entity>
+	  <a-entity id="jet" scale="1 1 1" position="0 3.5 0" rotation="0 0 0" animation-mixer></a-entity>
         </a-scene>
 
         <section class="world3d" id="focusOnHome">
