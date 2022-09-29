@@ -60,7 +60,7 @@ AFRAME.registerComponent('video-controls', {
 	
 	<a-assets timeout="10000">
 		<img id="grid" src="border.png" crossorigin="anonymous" />
-		<video id="video" loop="true" src="video/formation.mp4" autoplay></video>
+		<video id="video" loop="true" src="video/formations.mp4" autoplay></video>
 	</a-assets>
 	
 	<a-entity movement-controls="speed: 0.1; fly: false;" position="0 0 0">
@@ -74,14 +74,14 @@ AFRAME.registerComponent('video-controls', {
 		position=" 0.00 5.00 0.00" 
 		rotation="-90 0 0" 
 		color="#888888" 
-		material="src: #grid; repeat:100 100; transparent: true; opacity: 0.55"
+		material="src: #grid; repeat:100 100; transparent: true; opacity: 0.75"
 		shadow="cast: false; receive: true">
 	</a-plane>
 	
 	<a-plane
 		id = "video-border"
 		width = "17" height = "10"
-		position = "0 5 -2"
+		position = "0 5 -20"
 		color = "#440000"
 		video-controls>		
 		<a-video  
