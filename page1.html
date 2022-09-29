@@ -133,9 +133,17 @@
                		src="https://raw.githubusercontent.com/guarim/aframe/master/examples/test/video/Animation.mp4"
                		width="320" height="180" autoplay loop="true"
                		crossOrigin="anonymous" muted
-			curve-follow= "curveData: #helix1; type: parametric-curve; duration: 46; loop: true" >
-		</video>														    
-
+			>
+		</video>
+													    
+		<a-entity 
+			material="shader: flat; src: #videoBunny"
+               	 	geometry="primitive: plane; width: 320; height: 180;"
+                	position="0 60 -250"
+                 	rotation="0 +25 0"
+                   	visible="true"
+			curve-follow= "curveData: #helix1; type: parametric-curve; duration: 46; loop: true">
+     		</a-entity>
 		
 		
 	</a-entity>
