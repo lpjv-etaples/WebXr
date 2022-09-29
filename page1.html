@@ -63,15 +63,15 @@ AFRAME.registerComponent('video-controls', {
 		<video id="video" loop="true" src="video/formations.mp4" autoplay></video>
 	</a-assets>
 	
-	<a-entity movement-controls="speed: 0.1; fly: false;" position="0 0 0">
+	<!--<a-entity movement-controls="speed: 0.1; fly: false;" position="0 0 0">
 		<a-entity camera position="0 3 12" look-controls></a-entity>
 		<a-entity id="leftHand" laser-controls="hand: left" raycaster="" line="color: #FF00FF"></a-entity>
 		<a-entity id="rightHand" laser-controls="hand: right" raycaster="" line="color: #FFFF00"></a-entity>
-	</a-entity>
+	</a-entity>-->
 	
 	<a-plane
 		width="100" height="100"
-		position=" 0.00 5.00 -20.00" 
+		position=" 0.00 5.00 -10.00" 
 		rotation="-90 0 0" 
 		color="#888888" 
 		material="src: #grid; repeat:100 100; transparent: true; opacity: 0.75"
@@ -81,7 +81,7 @@ AFRAME.registerComponent('video-controls', {
 	<a-plane
 		id = "video-border"
 		width = "17" height = "10"
-		position = "0 5 -20"
+		position = "0 5 -10"
 		color = "#440000"
 		video-controls>		
 		<a-video  
@@ -106,7 +106,7 @@ AFRAME.registerComponent('video-controls', {
 	
 	<a-assets>
          
-	  <img id="logo1" src="assets/logo.png">
+	  <img id="logo1" src="assets/cap-mbc.png">
 	  <img id="im"  src="assets/1.png">
 	  <img id="im1"  src="assets/2.png">
 	  <img id="im2"  src="assets/3.png">
