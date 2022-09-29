@@ -131,7 +131,7 @@
 		<video 
 			id="f1" preload="auto"
                		src="video/f1.mp4""
-               		width="320" height="180" autoplay loop="true"
+               		width="4" height="3" autoplay loop="true"
                		crossOrigin="anonymous" muted
 			>
 		</video>
@@ -140,10 +140,10 @@
 			material="shader: flat; src: #f1"
                	 	geometry="primitive: plane; width: 5; height: 4;"
                 	position="0 1 -2"
-			 scale="0.5 0.5 0.5" 
+			scale="0.5 0.5 0.5" 
                  	rotation="0 0 0"
                    	visible="true"
-			curve-follow= "curveData: #helix1; type: parametric-curve; duration: 46; loop: true">
+			>
      		</a-entity>
 		
 		
@@ -156,9 +156,9 @@
 			 width="10" height="5"
 			 position="0 -2 -12"
 			 rotation="0 0 0"
-			 scale="0.5 0.6 0.5" 
-			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 52; loop: true" 
-			 >
+			 scale="0.5 0.6 0.5"
+			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 46; loop: true" >
+			 
 			<a-link href="portal-arches.html" scale="1 1 1"  image="#im1"></a-link>
 		</a-image>
 				
