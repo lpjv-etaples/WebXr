@@ -12,7 +12,7 @@
 <body>
 
 <a-scene environment="preset: volcano;" cursor="rayOrigin: mouse;" raycaster="far: 100; objects: [link];">
-	 
+	 <a-sky color="#ECECEC" material="" geometry=""></a-sky>
 	<a-assets>
         <img id="previewDefault"  src="images/spherical/default.jpg">
         <img id="previewVolcano"  src="images/spherical/volcano.jpg">
@@ -24,21 +24,21 @@
 
 <!-- note: raycast issue (link still active) after walking through portal -->
 
-<a-sphere id="origin" radius="0.2" position="0 0 0" color="blue"></a-sphere>
+<a-sphere id="origin" radius="0.15" position="0 0 0" color="blue"></a-sphere>
 
-<a-link	position="-4 1.6 -4" rotation="0 40 0"
+<a-link	position="-6 1.6 -4" rotation="0 40 0"
 	href="Bac.html" title="Formations BAC-PRO" image="#previewDefault"></a-link>
 
-<a-link position="-2 1.6 -5" rotation="0 20 0"
+<a-link position="-3 1.6 -5" rotation="0 20 0"
 	href="Cap.html" title="Formations CAP" image="#previewEgypt"></a-link>
 
 <a-link position="0 1.6 -6" 
 	href="formations-greta.html" title="Formations Greta" image="#previewForest"></a-link>
 
-<a-link position="2 1.6 -5" rotation="0 -20 0"
+<a-link position="3 1.6 -5" rotation="0 -20 0"
 	href="3pmet.html" title="Classe de 3Pmet" image="#previewArches"></a-link>
 
-<a-link position="4 1.6 -4" rotation="0 -40 0"
+<a-link position="6 1.6 -4" rotation="0 -40 0"
 	href="vie-lycee.html" title="Vie au lycée" image="#previewJapan"></a-link>
 
 
