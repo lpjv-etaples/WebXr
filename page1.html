@@ -106,7 +106,7 @@ AFRAME.registerComponent('video-controls', {
 	
 	
 	<a-assets>
-         
+          <img id="lien"  src="assets/conduite.jpg">
 	  <img id="logo1" src="assets/cap-mbc.png">
 	  <img id="im"  src="assets/1.png">
 	  <img id="im1"  src="assets/2.png">
@@ -254,6 +254,9 @@ AFRAME.registerComponent('video-controls', {
 		</a-image>
 				
 	</a-entity>
+	<a-sphere id="origin" radius="0.2" position="0 0 0" color="blue"></a-sphere>
+	<a-link position="0 0.6 -6" 
+	href="formations-greta.html" title="Nos formations" image="#lien"></a-link>
 	      
 </a-scene>
 </body>
