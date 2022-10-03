@@ -81,13 +81,13 @@ AFRAME.registerComponent('video-controls', {
 	
 	<a-plane
 		id = "video-border"
-		width = "25" height = "11"
+		width = "24" height = "11"
 		position = "0 6 -4.5"
 		color = "#440000"
 		video-controls>		
 		<a-video  
 			id = "video-display"
-			width="24" height="10" 
+			width="23" height="10" 
 			position="0 0 0.1"
 			src="#video">
 		</a-video>
@@ -129,12 +129,12 @@ AFRAME.registerComponent('video-controls', {
 	
 		
 	<a-entity id="helix"
-		parametric-curve="xyzFunctions: 17*cos(t), 1.2*cos(2*t) + 2, 7*sin(t); 
+		parametric-curve="xyzFunctions: 16*cos(t), 1*cos(2*t) + 2, 8*sin(t); 
 			   			  tRange: 0, 15;">
 	</a-entity>
 	
 	<a-entity id="helix1"
-		parametric-curve="xyzFunctions: 17*cos(t), 1.2*cos(2*t) + 2, 7*sin(t); 
+		parametric-curve="xyzFunctions: 16*cos(t), 1*cos(2*t) + 2, 8*sin(t); 
 			   			  tRange: 0, 15;">
 	</a-entity>
 	
@@ -161,7 +161,7 @@ AFRAME.registerComponent('video-controls', {
 			 id="jetModel" 
 			 scale="0.7 0.7 0.7"
 			 gltf-model="#jet"
-			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 44; loop: true" >
+			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 48; loop: true" >
 		
 		</a-entity>
 		
@@ -181,7 +181,7 @@ AFRAME.registerComponent('video-controls', {
 			 position="0 -2 -6"
 			 rotation="0 0 0"
 			 scale="0.3 0.3 0.3" 
-			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 50; loop: true" 
+			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 54; loop: true" 
 			 >
 			<a-link href="formation.html"  scale="1 1 1" image="#im"></a-link>
 		</a-image>
@@ -199,7 +199,7 @@ AFRAME.registerComponent('video-controls', {
 			 position="0 -2 -10"
 			 rotation="0 0 0"
 			 scale="0.3 0.3 0.3" 
-			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 56; loop: true" >
+			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 60; loop: true" >
 			 
 			<a-link href="formation.html" scale="1 1 1"  image="#im1"></a-link>
 		</a-image>
@@ -219,7 +219,7 @@ AFRAME.registerComponent('video-controls', {
 			 position="0 -2 -14"
 			 rotation="0 0 0"
 			  scale="0.3 0.3 0.3" 
-			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 62; loop: true" 
+			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 66; loop: true" 
 			 >
 			<a-link href="formation.html" scale="1 1 1"  image="#im1"></a-link>
 		</a-image>
@@ -234,7 +234,7 @@ AFRAME.registerComponent('video-controls', {
 			 position="0 -2 -18"
 			 rotation="0 0 0"
 			  scale="0.3 0.3 0.3" 
-			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 68; loop: true" 
+			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 72; loop: true" 
 			 >
 			<a-link href="formation.html" scale="1 1 1"  image="#im1"></a-link>
 		</a-image>
@@ -248,14 +248,14 @@ AFRAME.registerComponent('video-controls', {
 			 position="0 -2 -22"
 			 rotation="0 0 0"
 			  scale="0.3 0.3 0.3"  
-			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 72; loop: true" 
+			 curve-follow= "curveData: #helix1; type: parametric-curve; duration: 78; loop: true" 
 			 >
 			<a-link href="formation.html" scale="1 1 1"  image="#im1"></a-link>
 		</a-image>
 				
 	</a-entity>
 	<!--<a-sphere id="origin" radius="0.4" position="0 1 3" color="blue"></a-sphere>-->
-	<a-link position="0 2.5 5" 
+	<a-link position="0 1 4" 
 	href="formation.html" title="Les formations" image="#lien"></a-link>
 	      
 </a-scene>
