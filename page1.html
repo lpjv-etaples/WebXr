@@ -71,7 +71,7 @@ AFRAME.registerComponent('video-controls', {
 	
 	<!--<a-plane
 		width="100" height="100"
-		position=" 0.00 7.00 -5.00" 
+		position=" 0.00 5.00 -4.50" 
 		rotation="-90 0 0"
 		loop:true
 		color="#888888" 
@@ -81,13 +81,13 @@ AFRAME.registerComponent('video-controls', {
 	
 	<a-plane
 		id = "video-border"
-		width = "28" height = "11"
+		width = "26" height = "11"
 		position = "0 7 -5"
 		color = "#440000"
 		video-controls>		
 		<a-video  
 			id = "video-display"
-			width="27" height="10" 
+			width="25" height="10" 
 			position="0 0 0.1"
 			src="#video">
 		</a-video>
@@ -129,12 +129,12 @@ AFRAME.registerComponent('video-controls', {
 	
 		
 	<a-entity id="helix"
-		parametric-curve="xyzFunctions: 17*cos(t), 1.6*cos(2*t) + 2, 6*sin(t); 
+		parametric-curve="xyzFunctions: 18*cos(t), 1.4*cos(2*t) + 2, 6*sin(t); 
 			   			  tRange: 0, 15;">
 	</a-entity>
 	
 	<a-entity id="helix1"
-		parametric-curve="xyzFunctions: 17*cos(t), 1.6*cos(2*t) + 2, 6*sin(t); 
+		parametric-curve="xyzFunctions: 18*cos(t), 1.4*cos(2*t) + 2, 6*sin(t); 
 			   			  tRange: 0, 15;">
 	</a-entity>
 	
