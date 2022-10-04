@@ -63,17 +63,11 @@ AFRAME.registerComponent('video-controls', {
 		<video id="video" loop="true" src="video/Bat.mp4" autoplay></video>
 	</a-assets>
 	
-	<!--<a-entity movement-controls="speed: 0.1; fly: false;" position="0 0 0">
-		<a-entity camera position="0 3 12" look-controls></a-entity>
-		<a-entity id="leftHand" laser-controls="hand: left" raycaster="" line="color: #FF00FF"></a-entity>
-		<a-entity id="rightHand" laser-controls="hand: right" raycaster="" line="color: #FFFF00"></a-entity>
-	</a-entity>-->
-	
-	
+		
 	<a-plane
 		id = "video-border"
 		width = "10" height = "8"
-		position = "0 3.6 -6.5"
+		position = "0 4.6 -6.5"
 		color = "#440000"
 		video-controls>		
 		<a-video  
@@ -92,8 +86,6 @@ AFRAME.registerComponent('video-controls', {
 	  <img id="im2"  src="assets/for3.png">
 	  <img id="im3" src="assets/for4.png">
 	  <img id="im4"  src="assets/for5.png">
-	
-	 
 	</a-assets>
 
 	<a-entity id="camera" 
@@ -106,10 +98,11 @@ AFRAME.registerComponent('video-controls', {
                   minDistance: 15;
                   maxDistance: 50;
                   initialPosition: 0 3.5 11"
-                  mouse-cursor="" position="0 0 0" "></a-entity>
+                  mouse-cursor="" position="0 0 0" ">
+	</a-entity>
 	
 										  												     	
-	<a-entity position=""0 1.6 6"" rotation="0 0 0">
+	<a-entity position="-6 1.6 0" rotation="0 +10 0">
 
 		<a-image
 			 src="#im" 
@@ -121,7 +114,7 @@ AFRAME.registerComponent('video-controls', {
 				
 	</a-entity>
 									       
-	<a-entity position=""0 1.6 -6"" rotation="0 0 0>
+	<a-entity position="-3 1.6 -1" rotation="0 +5 0>
 
 		<a-image
 			 src="#im1" 
@@ -133,7 +126,7 @@ AFRAME.registerComponent('video-controls', {
 				
 	</a-entity>
 									       
-	<a-entity  position="6 1.6 6" rotation="0 +10 0 >
+	<a-entity  position="0 1.6 -2" rotation="0 0 0" >
 
 		<a-image
 			 src="#im2" 
@@ -143,7 +136,7 @@ AFRAME.registerComponent('video-controls', {
 		</a-image>
 				
 	</a-entity>
-	<a-entity position="-6 1.6 6" rotation="0 +10 0">
+	<a-entity position="3 1.6 -1" rotation="0 -5 0">
 
 		<a-image
 			 src="#im3" 
@@ -154,12 +147,12 @@ AFRAME.registerComponent('video-controls', {
 				
 	</a-entity>
 										 
-	<a-entity position="6 1.6 -6"  rotation="0 -10 0">
+	<a-entity position="6 1.6 0"  rotation="0 -10 0">
 
 		<a-image
 			 src="#im4" 
 			 width="10" height="5"
-			 rotation="0 0 0"
+			 rotation="0 -10 0"
 			 > 
 			 <a-link href="formation.html" scale="1 1 1"  image="#im34><a-link>
 		</a-image>
