@@ -67,7 +67,7 @@ AFRAME.registerComponent('video-controls', {
 	<a-plane
 		id = "video-border"
 		width = "11" height = "6"
-		position = "0 6.6 -6.5"
+		position = "0 0 1"
 		color = "#440000"
 		video-controls>		
 		<a-video  
@@ -91,18 +91,18 @@ AFRAME.registerComponent('video-controls', {
 	<a-entity id="camera" 
 		  camera
 		  orbit-controls="
-                  autoRotate: false;
+                  autoRotate: true;
 		  rotateSpeed: 0;
                   nableDamping: false;
                   target: 0 0 0;
                   minDistance: 15;
                   maxDistance: 50;
-                  initialPosition: 0 3 6"
+                  initialPosition: 0 1 6"
                   mouse-cursor="" position="0 0 0" ">
 	</a-entity>
 	
 										  												     	
-	<a-entity position="-14 2 0" rotation="0 +10 0">
+	<a-entity position="-14 5 0" rotation="0 +10 0">
 
 		<a-image
 			 src="#im" 
@@ -114,7 +114,7 @@ AFRAME.registerComponent('video-controls', {
 				
 	</a-entity>
 									       
-	<a-entity position="-7 1.6 -1" rotation="0 +5 0>
+	<a-entity position="-7 5 -1" rotation="0 +5 0>
 
 		<a-image
 			 src="#im1" 
@@ -126,7 +126,7 @@ AFRAME.registerComponent('video-controls', {
 				
 	</a-entity>
 									       
-	<a-entity  position="0 1 -2" rotation="0 0 0" >
+	<a-entity  position="0 5 -2" rotation="0 0 0" >
 
 		<a-image
 			 src="#im2" 
@@ -136,7 +136,7 @@ AFRAME.registerComponent('video-controls', {
 		</a-image>
 				
 	</a-entity>
-	<a-entity position="7 1.6 -1" rotation="0 -5 0">
+	<a-entity position="7 5 -1" rotation="0 -5 0">
 
 		<a-image
 			 src="#im3" 
@@ -147,7 +147,7 @@ AFRAME.registerComponent('video-controls', {
 				
 	</a-entity>
 										 
-	<a-entity position="14 2 0"  rotation="0 -10 0">
+	<a-entity position="14 5 0"  rotation="0 -10 0">
 
 		<a-image
 			 src="#im4" 
