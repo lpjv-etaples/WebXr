@@ -86,7 +86,7 @@
       <a-entity light="type: directional; color: #EEE" position="0 1 1"></a-entity>
 
       <!-- Floor. -->
-      <a-entity geometry="primitive: cylinder; height: .2; radius: 12;"
+      <a-entity geometry="primitive: cylinder; height: .2; radius: 18;"
                 material="color: #BABABA; src: #floor;
                           metalness: .2; repeat: 80 30; roughness: .1"
                 position="0 0 0"></a-entity>
@@ -121,8 +121,8 @@
 		>
 	</a-image>
           <a-entity mixin="column-light"></a-entity>
-          <a-entity mixin="object-on-column color doubleside circle spin"></a-entity>
-          <a-entity mixin="object-on-column color doubleside circle spin"></a-entity>
+          <!--<a-entity mixin="object-on-column color doubleside circle spin"></a-entity>
+          <a-entity mixin="object-on-column color doubleside circle spin"></a-entity>-->
         </a-entity>
         <a-entity mixin="column-bottom"></a-entity>
 		
@@ -131,6 +131,14 @@
       <!-- Cylinders. -->
       <a-entity position="-2.5 0 -5">
         <a-entity mixin="column">
+		<a-image
+		src="#im1" 
+		position="-0.2 1.7 -3"
+		rotation="0 +45 0"
+		scale="0.5 0.5 0.5"
+		width="3" height="2"
+		>
+	</a-image>
           <a-entity mixin="column-light"></a-entity>
           <a-entity mixin="object-on-column color cylinder spinX"></a-entity>
         </a-entity>
@@ -140,9 +148,17 @@
       <!-- Rings. -->
       <a-entity position="2.5 0 1">
         <a-entity mixin="column">
+	 <a-image
+		src="#im" 
+		position="0.2 1.7 0"
+		rotation="0 +45 0"
+		scale="0.5 0.5 0.5"
+		width="3" height="2"
+		>
+	 </a-image>
           <a-entity mixin="column-light"></a-entity>
-          <a-entity mixin="object-on-column color doubleside ring spin" animation__spin="dur: 6000"></a-entity>
-          <a-entity mixin="object-on-column color doubleside ring spinX"></a-entity>
+          <!--<a-entity mixin="object-on-column color doubleside ring spin" animation__spin="dur: 6000"></a-entity>
+          <a-entity mixin="object-on-column color doubleside ring spinX"></a-entity>-->
         </a-entity>
         <a-entity mixin="column-bottom"></a-entity>
       </a-entity>
@@ -150,20 +166,36 @@
       <!-- Spheres. -->
       <a-entity position="2.5 0 -2">
         <a-entity mixin="column">
+		<a-image
+		src="#im" 
+		position="0.2 1.7 -1"
+		rotation="0 +45 0"
+		scale="0.5 0.5 0.5"
+		width="3" height="2"
+		>
+	</a-image>
           <a-entity mixin="column-light"></a-entity>
-          <a-entity mixin="object-on-column color sphere yoyo"
+          <!--<a-entity mixin="object-on-column color sphere yoyo"
                     animation__yoyo="property: position; from: -0.2 1 0; to: -0.2 1.8 0"
                     position="-.2 1.2 0"></a-entity>
           <a-entity mixin="object-on-column color sphere yoyo"
                     animation__yoyo="property: position; from: 0 1.8 0; to: 0 1 0"></a-entity>
           <a-entity mixin="object-on-column color sphere yoyo" position=".2 1 0"
-                    animation__yoyo="property: position; to: 0.2 1.8 0"></a-entity>
+                    animation__yoyo="property: position; to: 0.2 1.8 0"></a-entity>-->
         </a-entity>
         <a-entity mixin="column-bottom"></a-entity>
       </a-entity>
 
       <!-- Torus. -->
       <a-entity position="2.5 0 -5">
+	<a-image
+		src="#im" 
+		position="0.2 1.7 -3"
+		rotation="0 +45 0"
+		scale="0.5 0.5 0.5"
+		width="3" height="2"
+		>
+	</a-image>
         <a-entity mixin="column">
           <a-entity mixin="column-light"></a-entity>
           <a-entity mixin="object-on-column color torus spin"></a-entity>
@@ -173,6 +205,14 @@
 
       <!-- Torus Knot. -->
       <a-entity position="2.5 0 -8">
+	<a-image
+		src="#im" 
+		position="0.2 1.7 -6"
+		rotation="0 +45 0"
+		scale="0.5 0.5 0.5"
+		width="3" height="2"
+		>
+	</a-image>
         <a-entity mixin="column">
           <a-entity mixin="column-light"></a-entity>
           <a-entity mixin="object-on-column color torus-knot spin"></a-entity>
