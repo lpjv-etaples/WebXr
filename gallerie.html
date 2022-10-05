@@ -9,7 +9,12 @@
 	  <script src="js/extended-wasd-controls.js"></script>
   </head>
   <body>
-    <a-scene background="color: #112" stats>
+   <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
+      environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1;
+      dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  false" 
+      device-orientation-permission-ui="enabled: false" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+          <a-sky color="#ECECEC" material="" geometry=""></a-sky>
+	
       <a-assets>
         <!-- Geometry mixins. -->
         <a-mixin id="box"
