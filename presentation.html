@@ -8,12 +8,9 @@
 	<script src="js/extended-wasd-controls.js"></script>
 	<script src="js/parser.js"></script>
 	<script src="js/aframe-parametric-curve.js"></script>
-	<script src="js/aframe-tube-geometry.js"></script>
 	<script src="js/aframe-curve-follow.js"></script>
 	<script src="js/components/link-controls.js"></script>
-	<script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
-	<script src="js/play-on-click.js"></script>
-    	<script src="js/hide-on-play.js"></script>
+	
 	
 </head>
 
@@ -98,26 +95,17 @@ AFRAME.registerComponent('video-controls', {
 	  <img id="im4"  src="assets/5.png">
 	</a-assets>
 
-	<a-entity id="camera" 
-		  camera
-		  orbit-controls="
-                  autoRotate: true;
-		  autoRotateSpeed: 0;
-                  nableDamping: false;
-                  target: 0 0.5 0;
-                  minDistance: 1;
-                  maxDistance: 90;
-                  initialPosition: 0 0.5 10"
-                  mouse-cursor="" position="0 0 0" "></a-entity>
+	<a-camera position="0 1.6 4"></a-camera>
+
 	
 		
 	<a-entity id="helix"
-		parametric-curve="xyzFunctions: 10*cos(t), 0.3*cos(2*t) + 1, 5*sin(t); 
+		parametric-curve="xyzFunctions: 10*cos(t), 0.2*cos(2*t) + 1, 5*sin(t); 
 			   			  tRange: 0, 40;">
 	</a-entity>
 	
 	<a-entity id="helix1"
-		parametric-curve="xyzFunctions: 10*cos(t), 0.3*cos(2*t) + 1, 5*sin(t); 
+		parametric-curve="xyzFunctions: 10*cos(t), 0.2*cos(2*t) + 1, 5*sin(t); 
 			   			  tRange: 0, 40;">
 	</a-entity>
 	
