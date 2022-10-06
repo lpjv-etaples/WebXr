@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Geometry Gallery</title>
     <meta name="description" content="Geometry Gallery - A-Frame">
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="js/aframe-master-v1.3.0.min.js"></script>
     <script src="js/aframe-environment-component.min.js"></script>
     <script src="js/extended-wasd-controls.js"></script>
@@ -158,9 +157,21 @@ AFRAME.registerComponent('video-controls', {
       <a-entity position="-2.5 0 1">
         <a-entity mixin="column">
           <a-entity mixin="column-light"></a-entity>
-          <a-entity mixin="object-on-column im spin" animation__spin="to: 360 360 0"></a-entity>
-          <a-entity mixin="object-on-column im spin" position=".18 1.2 .1" animation__spin="to: 360 360 0"></a-entity>
-          <a-entity mixin="object-on-column im spin" position="-.18 1.2 -.2" animation__spin="to: 360 360 0"></a-entity>
+          <a-entity mixin="object-on-column color box spin" animation__spin="to: 360 360 0"></a-entity>
+          <a-entity mixin="object-on-column color box spin" position=".18 1.2 .1" animation__spin="to: 360 360 0"></a-entity>
+          <a-entity mixin="object-on-column color box spin" position="-.18 1.2 -.2" animation__spin="to: 360 360 0"></a-entity>
+		<a-entity position="-2.42 1.2 0.1">
+
+			<a-image
+			 src="#im" 
+			 width="16" height="10"
+			 position="-2.42 1.2 0.1"
+			 rotation="0 +5 0"
+			 scale="0.1 0.1 0.1" 
+			
+			</a-image>
+		</a-entity>
+		
         </a-entity>
         <a-entity mixin="column-bottom"></a-entity>
       </a-entity>
