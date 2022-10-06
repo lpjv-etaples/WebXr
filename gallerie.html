@@ -16,6 +16,7 @@
     <script src="js/play-on-click.js"></script>
     <script src="js/hide-on-play.js"></script>
   </head>
+	
   <body>
     
     <script>
@@ -58,10 +59,10 @@ AFRAME.registerComponent('video-controls', {
 			
 	  <a-plane
 	  	id = "video-border"
-      width = "13" height = "8"
-		  position = "0 10 -4"
-		  color = "#440000"
-		  video-controls>		
+      		width = "13" height = "8"
+		 position = "0 10 -4"
+		 color = "#440000"
+		 video-controls>		
 		    <a-video  
 			    id = "video-display"
 			    width="12" height="7" 
@@ -69,9 +70,10 @@ AFRAME.registerComponent('video-controls', {
 			    src="#video">
 		    </a-video>
 	  </a-plane>
-
-	
-	  <a-assets>
+ 
+      <a-assets>
+	      
+	      <a-assets>
             <img id="fond" src="assets/conduite.jpg">
 	          <img id="im" src="assets/fam1.png">
 	          <img id="im1" src="assets/fam2.png">
@@ -81,7 +83,7 @@ AFRAME.registerComponent('video-controls', {
 	          <img id="im5" src="assets/for4.png">
 	          <img id="im6" src="assets/for5.png">
 	</a-assets>
-      <a-assets>
+	      
         <!-- Geometry mixins. -->
         <a-mixin id="box"
                  geometry="primitive: box; depth: .125; height: .125;
