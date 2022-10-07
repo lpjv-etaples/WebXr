@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Video</title>
+    <meta name="description" content="Video - A-Frame">
+    <script src="../../../dist/aframe-master.js"></script>
+    <script src="../../js/play-on-click.js"></script>
+    <script src="../../js/hide-on-play.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <video id="videoBunny" preload="auto"
+               src="https://raw.githubusercontent.com/lpjv-etaples/WebXr/video/Bat.mp4"
+               width="320" height="180" autoplay loop="true"
+               crossOrigin="anonymous" muted></video>
+        
+      </a-assets>
+
+     
+      <a-entity material="shader: flat; src: #videoBunny"
+                geometry="primitive: plane; width: 320; height: 180;"
+                position="0 60 -250"
+                rotation="0 0 0"
+                play-on-click
+                visible="true">
+      </a-entity>
+        
+      <a-camera>
+       <a-entity
+          position="0 0 -1.5"
+          text="align: center;
+                width: 6;
+                wrapCount: 100;
+                color: black;
+                value: Click or tap to start video"
+          hide-on-play="#videoFireworks">
+        </a-entity>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
