@@ -36,6 +36,15 @@
                       mouse-cursor=""
                       position="0 0 0">
             </a-entity>
+		
+	<a-assets>
+         
+	  <img id="im" src="assets/1.png">
+	  <img id="im1" src="assets/2.png">
+	  <img id="im2" src="assets/3.png">
+	  <img id="im3" src="assets/4.png">
+	  
+	</a-assets>
 
 
           <!-- adding assets to the program -->
@@ -46,7 +55,7 @@
 
             <a-asset-item id="surfboard5" src="./models/boite.obj"></a-asset-item>
             <img id="surfboard5Texture" src="./assets/1.png">
-            	   
+		              	   
             <a-asset-item id="schep" src="./models/boite.obj"></a-asset-item>
             <img id="scheptexture" src="./assets/2.png">
 
@@ -61,10 +70,16 @@
                         
           </a-assets>
           
-          <a-assets>
-		<a-asset-item id="jet" src="./models/stair.obj"></a-asset-item>
-		<img id="jvtexture" src="./assets/logo.png">
-	  </a-assets>
+         <a-entity position="7 4 7" rotation="0 0 0">
+
+		<a-image
+			 src="#im" 
+			 width="5" height="4"
+			 >
+			
+		</a-image>
+				
+	</a-entity>
 
           <!-- loading the assets inside the enviroment -->
               
