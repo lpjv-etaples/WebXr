@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>ESPACE D'INNOVATIONS</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+    <!-- <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script> -->
+  </head>
+  <body>
+        
+    <div id="chapters">
+    </div>
+    <div id="maincontainer">
+      <div id="contentWidth">
+        <a-scene environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1;  dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  false" device-orientation-permission-ui="enabled: false" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+          <a-sky color="#ECECEC" material="" geometry=""></a-sky>
+
+          <!-- adding the camera to the scene -->
+          <!-- <a-entity animation="property: position; to: -10 1.6 0; loop: true; yoyo:true; dur: 10000;begin:onstart;" id="camera" camera look-controls position="0 1.8 0" mouse-cursor> -->
+          <!-- <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 100000; easing:	linear;" id="camera" camera position="0 1.8 0" mouse-cursor> -->
+          <a-entity
+                    id="camera"
+                    camera
+                    orbit-controls="
+                      autoRotate: true;
+                      enableDamping: false;
+                      rotateSpeed:1;
+                      target: 0 0 0;
+                      minDistance: 5;
+                      maxDistance: 90;
+                      initialPosition: 0 6 14"
+                      mouse-cursor=""
+                      position="0 0 0">
+            </a-entity>
+
+
+          <!-- adding assets to the program -->
+          <a-assets>
+
+            <a-asset-item id="surfboard5" src="./models/cube.obj"></a-asset-item>
+            <img id="surfboard5Texture" src="./assets/1.png">
+            
+	    <a-asset-item id="sol" src="models/jv.OBJ"></a-asset-item>
+	    <img id="btexture" src="./assets/beach.png">
+
+            <a-asset-item id="schep" src="./models/cube.obj"></a-asset-item>
+            <img id="scheptexture" src="./assets/2.png">
+
+
+            <a-asset-item id="shirt" src="./models/cube.obj"></a-asset-item>
+            <img id="shirttexture" src="./assets/3.png">
+
+            <a-asset-item id="rightsneaker" src="./models/cube.obj"></a-asset-item>
+            <img id="rightsneakertexture" src="./assets/4.png">
+
+            <a-asset-item id="leftsneaker" src="./models/cube.obj"></a-asset-item>
+            <img id="leftsneakertexture" src="./assets/5.png">
+                        
+          </a-assets>
+          
+          <a-assets>
+		<a-asset-item id="jet" src="./models/scene.gltf"></a-asset-item>
+		<img id="jvtexture" src="./assets/logo.png">
+	  </a-assets>
+
+          <!-- loading the assets inside the enviroment -->
+              
+          <a-entity id="a-schep" position="6 2.6 6" scale="2 2 2" rotation="0 0 0" obj-model="obj: #schep" material="src: #scheptexture"></a-entity>
+          <a-entity id="a-rightsneaker" position="6 2.6 -6" scale="2 2 2" rotation="0 0 0" obj-model="obj: #rightsneaker" material="src: #rightsneakertexture"></a-entity>
+          <a-entity id="a-leftsneaker" position="-6 2.6 6" scale="2 2 2" rotation="0 0 0" obj-model="obj: #leftsneaker" material="src: #leftsneakertexture"></a-entity>
+          <a-entity id="a-shirt" position="-6 2.6 -6" scale="2 2 2" rotation="0 0 0" obj-model="obj: #shirt" material="src: #shirttexture"></a-entity>
+	  <a-entity id="sol" scale="3.4 3 3.4" position="0 4.5 0" rotation="0 0 0" obj-model="obj: #sol" material="src: #jvtexture"</a-entity>
+        </a-scene>
+
+        <section class="world3d" id="focusOnHome">
+          <span class="anchors" id="home"></span>
+          <div class="infos">
+            <h1>WEBVR LP JULES VERNE ETAPLES</h1>
+            <p>Auteur:  M GUARIM </p>
+          </div>
+          <a href="#about" class="cta">INFOS</a>
+	  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js" charset="utf-8"></script>
+  </body>
+</html>
