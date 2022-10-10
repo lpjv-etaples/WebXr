@@ -8,11 +8,45 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="js/components/link-controls.js"></script>
     <script src="js/extended-wasd-controls.js"></script>
+    <script src="js/parser.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
     <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
     <!-- <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script> -->
   </head>
   <body>
+	  
+	  <script>
+
+AFRAME.registerComponent('video-controls', {
+	
+	init: function()
+	{
+		let video = document.querySelector("#video");
+
+		let videoDisplay = document.querySelector("#video-display");
+		let videoBorder  = document.querySelector("#video-border");
+		let videoMesh  = videoDisplay.getObject3D("mesh");
+		let borderMesh = videoBorder.getObject3D("mesh");
+		
+		videoBorder.addEventListener("mousedown", function(event)
+		{
+			if ( video.paused )
+			{
+				video.play();
+				borderMesh.material.color.set("#004400");
+			}
+			else
+			{
+				video.pause();
+				borderMesh.material.color.set("#440000");
+			}
+		});
+	}
+	
+});
+
+</script>
+
         
     <div id="chapters">
     </div>
@@ -41,7 +75,7 @@
 
 		
 		
-	<!--<a-assets timeout="1000000">
+	<a-assets timeout="1000000">
 		<img id="grid" src="border.png" crossorigin="anonymous" />
 		<video id="video" loop="true" src="video/formations.mp4" autoplay></video>
 	</a-assets>
@@ -58,7 +92,7 @@
 			position="0 0 0.1"
 			src="#video">
 		</a-video>
-	</a-plane>-->
+	</a-plane>
 		
 	<a-assets>
          
