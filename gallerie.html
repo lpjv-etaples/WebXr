@@ -138,21 +138,23 @@
         <a-entity mixin="column-bottom"></a-entity>
       </a-entity>
 
-      <!-- Cylinders. -->
-      <a-entity position="-2.5 0 -5">
-        <a-entity mixin="column">
-          <!--<a-entity mixin="column-light"></a-entity>
-          <a-entity mixin="object-on-column color cylinder spinX"></a-entity>-->
-        </a-entity>
-        <a-entity mixin="column-bottom"></a-entity>
-      </a-entity>
-
+      
       <!-- Rings. -->
       <a-entity position="2.5 0 1">
         <a-entity mixin="column">
           <!--<a-entity mixin="column-light"></a-entity>
           <a-entity mixin="object-on-column color doubleside ring spin" animation__spin="dur: 6000"></a-entity>
           <a-entity mixin="object-on-column color doubleside ring spinX"></a-entity>-->
+		<a-entity position="0 1.3 0" rotation="0 +30 0">
+
+		  <a-image
+		      src="#im2" 
+		      width="1" height="1"
+			>
+			
+		   </a-image>
+				
+	          </a-entity>
         </a-entity>
         <a-entity mixin="column-bottom"></a-entity>
       </a-entity>
@@ -168,6 +170,16 @@
                     animation__yoyo="property: position; from: 0 1.8 0; to: 0 1 0"></a-entity>
           <a-entity mixin="object-on-column color sphere yoyo" position=".2 1 0"
                     animation__yoyo="property: position; to: 0.2 1.8 0"></a-entity>-->
+		<a-entity position="0 1.3 0" rotation="0 +30 0">
+
+		  <a-image
+		      src="#im3" 
+		      width="1" height="1"
+			>
+			
+		   </a-image>
+				
+	          </a-entity>
         </a-entity>
         <a-entity mixin="column-bottom"></a-entity>
       </a-entity>
