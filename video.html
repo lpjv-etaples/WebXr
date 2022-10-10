@@ -48,18 +48,7 @@ AFRAME.registerComponent('video-controls', {
 		<video id="video" loop="true" src="./video/Bat.mp4" autoplay></video>
 	</a-assets>
 
-	<a-entity movement-controls="speed: 0.1; fly: true;" position="0 0 0">
-		<a-entity camera position="0 1.5 1" look-controls></a-entity>
-		<a-entity id="leftHand" laser-controls="hand: left" raycaster="" line="color: #FF00FF"></a-entity>
-		<a-entity id="rightHand" laser-controls="hand: right" raycaster="" line="color: #FFFF00"></a-entity>
-	</a-entity>
-	
-	<a-sky 
-		rotation = "0 0 0"
-		color = "#FFFFFF"
-		material = "src: #sky">
-	</a-sky>
-	
+		
 	<a-plane
 		width="100" height="100"
 		position=" 0.00 0.00 0.00" 
@@ -82,6 +71,18 @@ AFRAME.registerComponent('video-controls', {
 			src="#video">
 		</a-video>
 	</a-plane>
+	
+	<a-entity movement-controls="speed: 0.1; fly: true;" position="0 0 0">
+		<a-entity camera position="0 1.5 1" look-controls></a-entity>
+		<a-entity id="leftHand" laser-controls="hand: left" raycaster="" line="color: #FF00FF"></a-entity>
+		<a-entity id="rightHand" laser-controls="hand: right" raycaster="" line="color: #FFFF00"></a-entity>
+	</a-entity>
+	
+	<a-sky 
+		rotation = "0 0 0"
+		color = "#FFFFFF"
+		material = "src: #sky">
+	</a-sky>
 	
 </a-scene>
 </body>
