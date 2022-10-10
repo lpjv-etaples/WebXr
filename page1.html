@@ -6,6 +6,7 @@
     <title>ESPACE D'INNOVATIONS</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="js/components/link-controls.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
     <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
     <!-- <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script> -->
@@ -66,7 +67,7 @@
                         
           </a-assets>
           
-         <a-entity position="7 6 7" rotation="0 -180 0">
+         <a-entity position="7 5 7" rotation="0 -180 0">
 
 		<a-image
 			 src="#im" 
@@ -77,7 +78,7 @@
 				
 	</a-entity>
 		
-	<a-entity position="7 6 -7" rotation="0 -180 0">
+	<a-entity position="7 5 -7" rotation="0 -180 0">
 
 		<a-image
 			 src="#im1" 
@@ -88,7 +89,7 @@
 				
 	</a-entity>
 		
-	<a-entity position="-7 6 7" rotation="0 -180 0">
+	<a-entity position="-7 5 7" rotation="0 -180 0">
 
 		<a-image
 			 src="#im2" 
@@ -99,7 +100,7 @@
 				
 	</a-entity>
 		
-	<a-entity position="-7 6 -7" rotation="0 -180 0">
+	<a-entity position="-7 5 -7" rotation="0 -180 0">
 
 		<a-image
 			 src="#im3" 
@@ -110,13 +111,27 @@
 				
 	</a-entity>
 		
+	<a-link position="7 4 7" 
+	href="bac-tne.html" title="Transition Numerique et energetique" image="#lien">
+	</a-link>
+	<a-link position="7 4 -7" 
+	href="bac-tne.html" title="Transition Numerique et energetique" image="#lien">
+	</a-link>
+	<a-link position="-7 4 7" 
+	href="bac-tne.html" title="Transition Numerique et energetique" image="#lien">
+	</a-link>
+	<a-link position="-7 4 -7" 
+	href="bac-tne.html" title="Transition Numerique et energetique" image="#lien">
+	</a-link>
+	
+		
           <!-- loading the assets inside the enviroment -->
               
-          <a-entity id="fbac" position="7 2 7" scale="0.15 0.15 0.15" rotation="0 0 0" obj-model="obj: #fbac" material="src: #bac"></a-entity>
-          <a-entity id="fcap" position="7 2 -7" scale="0.15 0.15 0.15" rotation="0 0 0" obj-model="obj: #fcap" material="src: #cap"></a-entity>
-          <a-entity id="f3eme" position="-7 2 7" scale="0.15 0.15 0.15" rotation="0 0 0" obj-model="obj: #f3eme" material="src: #3eme"></a-entity>
-          <a-entity id="fgreta" position="-7 2 -7" scale="0.15 0.15 0.15" rotation="0 0 0" obj-model="obj: #fgreta" material="src: #greta"></a-entity>
-	  <a-entity id="centre" scale="0.1 0.1 0.1" position="0 3 0" rotation="+90 0 +90" obj-model="obj: #centre" material="src: #btexture"</a-entity>
+          <a-entity id="fbac" position="7 2 7" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fbac" material="src: #bac"></a-entity>
+          <a-entity id="fcap" position="7 2 -7" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fcap" material="src: #cap"></a-entity>
+          <a-entity id="f3eme" position="-7 2 7" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #f3eme" material="src: #3eme"></a-entity>
+          <a-entity id="fgreta" position="-7 2 -7" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fgreta" material="src: #greta"></a-entity>
+	  <a-entity id="centre" scale="0.1 0.1 0.1" position="0 5 0" rotation="+90 0 +180" obj-model="obj: #centre" material="src: #btexture"</a-entity>
        </a-scene>
 
         <section class="world3d" id="focusOnHome">
@@ -130,8 +145,8 @@
 	<section id="aboutcont">
           <span class="anchors" id="about">INFOS</span>
           <div class="textcontainer">
-	  <a class="cta" href="https://lpjv-etaples.github.io/WebXr/gallerie.html">Rechercher une formation</a>
-            <h2>DECOUVRIR TOUTES NOS FORMATIONS</h2>
+	  <a class="cta" href="https://lpjv-etaples.github.io/WebXr/index.html">RETOUR ACCEUIL</a>
+            <h2>RETOUR PAGE ACCEUIL</h2>
 	  </div>
     	</div> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
