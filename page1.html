@@ -21,7 +21,12 @@
     </div>
     <div id="maincontainer">
       <div id="contentWidth">
-        <a-scene environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1;  dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  false" device-orientation-permission-ui="enabled: false" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+	      
+   <a-scene environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1;  
+	 dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  false" 
+	 device-orientation-permission-ui="enabled: false" fog="color: #74ab90; far: 100; density: 0" visible="" 
+	 cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+	   
           <a-sky color="#ECECEC" material="" geometry=""></a-sky>
 
           
@@ -83,11 +88,8 @@
 			 src="#im" 
 			 width="4" height="3"
 			 >
-			
 		</a-image>
-		 <a-link position="0 -2 0.1" 
-	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS BAC-PRO" image="#mac">
-	 	 </a-link>		
+		
 	</a-entity>
 		
 	<a-entity position="7 5 -6" rotation="0 -200 0">
@@ -96,11 +98,8 @@
 			 src="#im1" 
 			 width="4" height="3"
 			 >
-			
 		</a-image>
-		<a-link position="0 -1 0.1" 
-	 		href="cap.html" title="DECOUVRIR LES FORMATIONS CAP" image="#mac">
-		</a-link>		
+			
 	</a-entity>
 		
 	<a-entity position="-7 5 6" rotation="0 +200 0">
@@ -109,11 +108,8 @@
 			 src="#im2" 
 			 width="4" height="3"
 			 >
-			
 		</a-image>
-		<a-link position="0 -2 -0.1" 
-			href="gallerie.html" title="DECOUVRIR LA CLASSE DE 3PMET" image="#mac">
-		</a-link>
+		
 				
 	</a-entity>
 		
@@ -133,10 +129,30 @@
 				
           <!-- loading the assets inside the enviroment -->
               
-          <a-entity id="fbac" position="7 2 7" scale="0.2 0.2 0.2" rotation="0 -180 0" obj-model="obj: #fbac" material="src: #bac"></a-entity>
-          <a-entity id="fcap" position="7 2 -7" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fcap" material="src: #cap"></a-entity>
-          <a-entity id="f3eme" position="-7 2 7" scale="0.2 0.2 0.2" rotation="0 -180 0" obj-model="obj: #f3eme" material="src: #3eme"></a-entity>
-          <a-entity id="fgreta" position="-7 2 -7" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fgreta" material="src: #greta"></a-entity>
+          <a-entity id="fbac" position="7 2 7" scale="0.2 0.2 0.2" rotation="0 -180 0" obj-model="obj: #fbac" material="src: #bac">
+		 <a-link position="0 -2 0.1" 
+	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS BAC-PRO" image="#mac">
+	 	 </a-link>			
+	  </a-entity>
+		
+          <a-entity id="fcap" position="7 2 -7" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fcap" material="src: #cap">
+		<a-link position="0 -1 0.1" 
+	 		href="cap.html" title="DECOUVRIR LES FORMATIONS CAP" image="#mac">
+		</a-link>	
+	  </a-entity>
+		
+          <a-entity id="f3eme" position="-7 2 7" scale="0.2 0.2 0.2" rotation="0 -180 0" obj-model="obj: #f3eme" material="src: #3eme">
+		<a-link position="0 -1 0.1" 
+	 		href="cap.html" title="DECOUVRIR LES FORMATIONS CAP" image="#mac">
+		</a-link>	
+	 </a-entity>
+		
+          <a-entity id="fgreta" position="-7 2 -7" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fgreta" material="src: #greta">
+	  	<a-link position="0 -2 -0.1" 
+			href="gallerie.html" title="DECOUVRIR LA CLASSE DE 3PMET" image="#mac">
+		</a-link>
+	 </a-entity>
+		
 	  <a-entity id="centre" scale="0.08 0.08 0.08" position="0 5.8 0" rotation="+90 0 +180" obj-model="obj: #centre" material="src: #btexture"</a-entity>
 		
 	
