@@ -3,13 +3,18 @@
   <head>
     <script src="js/aframe-master-v1.3.0.min.js"></script>
 	<script src="js/aframe-environment-component.min.js"></script>
+	 <script src="js/aframe-master.js"></script>
 	<script src="js/extended-wasd-controls.js"></script>
 	<script src="js/parser.js"></script>
 	<script src="js/aframe-parametric-curve.js"></script>
+	<script src="js/aframe-tooltip-component.js"></script>
 	<script src="js/aframe-tube-geometry.js"></script>
 	<script src="js/aframe-curve-follow.js"></script>
 	<script src="js/link-controls.js"></script>
+	<script src="js/camera-position.js"></script>
 	<script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+	<script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
+	<script src="js/info-message.js"></script>
 	<script src="js/play-on-click.js"></script>
     	<script src="js/hide-on-play.js"></script>
   <body>
@@ -20,10 +25,11 @@
       <div id="contentWidth">-->
 	      
    <a-scene 
-	    environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1;  
-	 dressingVariance:  [object Object]; objects: [link]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  true" 
-	 device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" 
-	 cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+	    environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;   fog="color: #74ab90;  density: 0" 
+	 	cursor="rayOrigin: mouse" raycaster="far: 100; objects: [link];"
+         	camera-position
+      		environment
+		info-message="htmlSrc: #messageText">
 	   
           <a-sky color="#ECECEC" material="" geometry=""></a-sky>
 
