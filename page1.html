@@ -21,10 +21,8 @@
       <div id="contentWidth">-->
 	      
    <!--<a-scene environment="preset: default;" cursor="rayOrigin: mouse;" raycaster="far: 100; objects: [link];">-->
-	 <a-scene environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1; objects: [link];   dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  false" device-orientation-permission-ui="enabled: false" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+	 <a-scene environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1; objects: [link];   dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  true" device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
           <a-sky color="#ECECEC" material="" geometry=""></a-sky>   
-
-
           
           <a-entity
                     id="camera"
@@ -32,7 +30,7 @@
                     orbit-controls="
                       autoRotate: true;
                       enableDamping: true;
-                      autoRotateSpeed:0;
+                      autoRotateSpeed:0.1;
                       target: 0 0 0;
                       minDistance: 5;
                       maxDistance: 90;
@@ -40,8 +38,7 @@
                       mouse-cursor=""
                       position="0 0 0">
             </a-entity>-->
-			
-		
+				
 	<a-assets>
          
 	  <img id="logo" src="assets/logo.png">
@@ -52,7 +49,6 @@
 	  <img id="im3" src="assets/4.png">
 	  
 	</a-assets>
-
 
           <!-- adding assets to the program -->
         <a-assets>
