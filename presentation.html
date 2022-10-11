@@ -16,45 +16,10 @@
 
 <body>
 
-<script>
 
-AFRAME.registerComponent('video-controls', {
-	
-	init: function()
-	{
-		let video = document.querySelector("#video");
-
-		let videoDisplay = document.querySelector("#video-display");
-		let videoBorder  = document.querySelector("#video-border");
-		let videoMesh  = videoDisplay.getObject3D("mesh");
-		let borderMesh = videoBorder.getObject3D("mesh");
-		
-		videoBorder.addEventListener("mousedown", function(event)
-		{
-			if ( video.paused )
-			{
-				video.play();
-				borderMesh.material.color.set("#004400");
-			}
-			else
-			{
-				video.pause();
-				borderMesh.material.color.set("#440000");
-			}
-		});
-	}
-	
-});
-
-</script>
-
-
-<a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
-      environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1;
-      dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  false" 
-      device-orientation-permission-ui="enabled: false" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
-          <a-sky color="#ECECEC" material="" geometry=""></a-sky>
-	
+<a-scene environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1; objects: [link];   dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  true" device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+          <a-sky color="#ECECEC" material="" geometry=""></a-sky>   
+          
 	<a-assets timeout="1000000">
 		<img id="grid" src="border.png" crossorigin="anonymous" />
 		<video id="video" loop="true" src="video/formations.mp4" autoplay></video>
