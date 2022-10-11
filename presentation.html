@@ -23,27 +23,7 @@
       device-orientation-permission-ui="enabled: false" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
           <a-sky color="#ECECEC" material="" geometry=""></a-sky>
 
-         
-	<a-assets timeout="1000000">
-		<img id="grid" src="border.png" crossorigin="anonymous"></img>
-		<video id="video" loop="true" src="video/formations.mp4" autoplay></video>
-	</a-assets>
-		
-	<a-plane
-		id = "video-border"
-		width = "30" height = "12"
-		position = "0 5 -3.5"
-		color = "#440000"
-		video-controls>		
-		<a-video  
-			id = "video-display"
-			width="28" height="10" 
-			position="0 0 0.1"
-			src="#video">
-		</a-video>
-	</a-plane>
-
-            
+                 
 	<a-assets>
 		<a-asset-item id="jet" src="models/drone.glb"></a-asset-item>
 	</a-assets>
