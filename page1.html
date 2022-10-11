@@ -9,6 +9,7 @@
 	<script src="js/link-controls.js"></script>
 	<script src="js/camera-position.js"></script>
 	<script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
+	<script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
 	<script src="js/info-message.js"></script>
 	<script src="js/play-on-click.js"></script>
     	<script src="js/hide-on-play.js"></script>
@@ -21,7 +22,7 @@
       <div id="contentWidth">-->
 	      
    <!--<a-scene environment="preset: default;" cursor="rayOrigin: mouse;" raycaster="far: 100; objects: [link];">-->
-	 <a-scene environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1; objects: [link];   dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  true" device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+	 <a-scene environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  1;   dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  true" device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1"; objects: [link]; >
           <a-sky color="#ECECEC" material="" geometry=""></a-sky>   
           
           <a-entity
@@ -128,6 +129,8 @@
           <a-entity id="fgreta" position="-7 2 -7" scale="0.2 0.2 0.2" rotation="0 +45 0" obj-model="obj: #fgreta" material="src: #greta">
 	  	
 	 </a-entity>
+		 
+	  <a-entity id="centre" scale="0.08 0.08 0.08" position="0 6.5 0" rotation="+90 0 +180" obj-model="obj: #centre" material="src: #btexture"</a-entity>
 	
 	   <a-link position="7 1 7.5" scale="1.2 1.2 1.2"
 	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS BAC-PRO" image="#mac">
