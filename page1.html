@@ -18,15 +18,15 @@
 
 <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
       environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  0.5;
-      dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  false" 
-      device-orientation-permission-ui="enabled: false" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+      dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  true" 
+      device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
           <a-sky color="#ECECEC" material="" geometry=""></a-sky>
 
         <a-entity id="camera" 
 		  camera
 		  orbit-controls="
                   autoRotate: true;
-		  autoRotateSpeed: 0.1;
+		  autoRotateSpeed: 0;
                   nableDamping: false;
                   target: 0 0 0;
                   minDistance: 15;
@@ -68,9 +68,11 @@
             <img id="greta" src="./assets/4.png">
                         
           </a-assets>
-						
-	 <a-video src="#vid" width="24" height="15" position="0 0 0"></a-video>	
-          
+	
+	 <a-entity position="0 10 0" rotation="0 0 0">					
+	 	<a-video src="#vid" width="12" height="7" position="0 10 0"></a-video>	
+         </a-entity>
+									   
          <a-entity position="7 5 6" rotation="0 -45 0">
 
 		<a-image
