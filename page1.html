@@ -9,8 +9,11 @@
 	<script src="js/aframe-parametric-curve.js"></script>
 	<script src="js/aframe-tube-geometry.js"></script>
 	<script src="js/aframe-curve-follow.js"></script>
+	<script src="js/components/link-controls.js"></script>
 	<script src="js/link-controls.js"></script>
 	<script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+	<script src="js/play-on-click.js"></script>
+    	<script src="js/hide-on-play.js"></script> 
 	
 </head>
 
@@ -69,7 +72,7 @@ AFRAME.registerComponent('video-controls', {
 		<a-video  
 			id = "video-display"
 			width="23" height="10" 
-			position="0 0 0.1"
+			position="0 10 0"
 			src="#video">
 		</a-video>
 	</a-plane>
@@ -98,8 +101,7 @@ AFRAME.registerComponent('video-controls', {
 	  
 	</a-assets>
 		 
-	<video id="vid" autoplay loop="true" src="/video/formations.mp4"></video>
-  	
+		
 
           <!-- adding assets to the program -->
         <a-assets>
@@ -120,10 +122,6 @@ AFRAME.registerComponent('video-controls', {
             <img id="greta" src="./assets/4.png">
                         
           </a-assets>
-	
-	 <a-entity position="0 10 0" rotation="0 0 0">					
-	 	<a-video src="#vid" width="12" height="7" position="0 10 0"></a-video>	
-         </a-entity>
 									   
          <a-entity position="7 5 6" rotation="0 -45 0">
 
