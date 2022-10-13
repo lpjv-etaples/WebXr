@@ -1,0 +1,11 @@
+Model Information:
+* title:	Geometres Sur Chantier
+* source:	https://sketchfab.com/3d-models/geometres-sur-chantier-ce09fadaa6224ae08eaca2bab0ddb1c8
+* author:	PatrickBiani (https://sketchfab.com/PatrickBiani)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Geometres Sur Chantier" (https://sketchfab.com/3d-models/geometres-sur-chantier-ce09fadaa6224ae08eaca2bab0ddb1c8) by PatrickBiani (https://sketchfab.com/PatrickBiani) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
