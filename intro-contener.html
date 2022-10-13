@@ -87,7 +87,7 @@ AFRAME.registerComponent('video-controls', {
                   target: 0 0 0;
                   minDistance: 15;
                   maxDistance: 50;
-                  initialPosition: 0 2.5 13"
+                  initialPosition: 0 0 0"
                   mouse-cursor="" position="0 0 0" "></a-entity>
 				
 	<a-assets>
@@ -141,32 +141,33 @@ AFRAME.registerComponent('video-controls', {
 		
 	
 	
-	<a-entity gltf-model="#tree" position="0 2 --10 "  cale="0.2 0.2 0.2"  rotation="0 0 0" animation-mixer></a-entity>
-				
+	<a-entity gltf-model="#tree" position="0 2 0 "  scale="0.2 0.2 0.2"  rotation="0 0 0" animation-mixer></a-entity>
+	<a-entity gltf-model="#chant" position="0 0 -10 "  scale="0.2 0.2 0.2"  rotation="0 0 0" animation-mixer></a-entity>
+											      
           <!-- loading the assets inside the enviroment -->
               
-          <a-entity id="fbac" position="7 2 7" scale="0.2 0.2 0.2" rotation="0 -45 0" obj-model="obj: #fbac" material="src: #bac">
+          <a-entity id="fbac" position="7 2 7" scale="1 1 1" rotation="0 -45 0" obj-model="obj: #fbac" material="src: #bac">
 		
 	  </a-entity>
 		
-          <a-entity id="fcap" position="7 2 -7" scale="0.2 0.2 0.2" rotation="0 -45 0" obj-model="obj: #fcap" material="src: #cap">
-		
+          <a-entity id="fcap" position="7 2 -7"  scale="1 1 1" rotation="0 -45 0" obj-model="obj: #fcap" material="src: #cap">
+         
 	  </a-entity>
 		
-          <a-entity id="f3eme" position="-7 2 7" scale="0.2 0.2 0.2" rotation="0 +45 0" obj-model="obj: #f3eme" material="src: #3eme">
+          <a-entity id="f3eme" position="-7 2 7" scale="1 1 1" rotation="0 +45 0" obj-model="obj: #f3eme" material="src: #3eme">
 			
 	 </a-entity>
 		
-          <a-entity id="fgreta" position="-7 2 -7" scale="0.2 0.2 0.2" rotation="0 +45 0" obj-model="obj: #fgreta" material="src: #greta">
+          <a-entity id="fgreta" position="-7 2 -7" scale="1 1 1" rotation="0 +45 0" obj-model="obj: #fgreta" material="src: #greta">
 	  	
 	 </a-entity>
 		 
-	  <a-entity id="centre" scale="0.08 0.08 0.08" position="0 6.5 0" rotation="+90 0 +180" obj-model="obj: #centre" material="src: #btexture">
-	  </a-entity>
+	  <!--<a-entity id="centre" scale="0.08 0.08 0.08" position="0 6.5 0" rotation="+90 0 +180" obj-model="obj: #centre" material="src: #btexture">
+	  </a-entity>-->
 	
 	  
 		 
-	   <a-link position="7 1 7.5" scale="0.2 0.2 0.2" 
+	   <a-link position="7 1 7.5" scale="0.4 0.4 0.4" 
 	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS BAC PRO" image="#mac">
 	   </a-link>
 												 
