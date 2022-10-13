@@ -1,67 +1,133 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-	<title>A-Frame: Link component</title>
-	<meta name="description" content="A-Frame Examples">
+<html lang="en" dir="ltr">
+  <head>
+	<title>WebXR-LYCÉE DES MÉTIERS DU BÂTIMENT ET DES ÉNERGIES RENOUVELABLES JULES VERNE</title>
 	<script src="js/aframe-master-v1.3.0.min.js"></script>
 	<script src="js/aframe-environment-component.min.js"></script>
+	<script src="js/extended-wasd-controls.js"></script>
+	<script src="js/parser.js"></script>
+	<script src="js/aframe-parametric-curve.js"></script>
+	<script src="js/aframe-tube-geometry.js"></script>
+	<script src="js/aframe-curve-follow.js"></script>
+	<script src="js/components/link-controls.js"></script>
 	<script src="js/link-controls.js"></script>
+	<script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+	<script src="js/play-on-click.js"></script>
+    	<script src="js/hide-on-play.js"></script> 
+	
 </head>
 
 <body>
+	
+<script>
 
-<!-- cursor activated from mouse position; only intersects objects with "link" component added (the <a-link> tag) -->
+AFRAME.registerComponent('video-controls', {
+	
+	init: function()
+	{
+		let video = document.querySelector("#video");
 
-<!-- environments featured: default, volcano, goldmine, egypt, forest, arches, japan -->
-<a-scene environment="preset: default;" cursor="rayOrigin: mouse;" raycaster="far: 100; objects: [link];">
-	  
-	<a-assets>
-        <img id="previewDefault"  src="assets/menuiserie-1.jpg">
-        <img id="previewVolcano"  src="assets/menuiserie-1.jpg">
-        <img id="previewEgypt"    src="assets/menuiserie-1.jpg">
-        <img id="previewForest"   src="assets/menuiserie-1.jpg">
-        <img id="previewArches"   src="assets/menuiserie-1.jpg">
-        <img id="previewJapan"    src="assets/menuiserie-1.jpg">
+		let videoDisplay = document.querySelector("#video-display");
+		let videoBorder  = document.querySelector("#video-border");
+		let videoMesh  = videoDisplay.getObject3D("mesh");
+		let borderMesh = videoBorder.getObject3D("mesh");
+		
+		videoBorder.addEventListener("mousedown", function(event)
+		{
+			if ( video.paused )
+			{
+				video.play();
+				borderMesh.material.color.set("#004400");
+			}
+			else
+			{
+				video.pause();
+				borderMesh.material.color.set("#440000");
+			}
+		});
+	}
+	
+});
+
+</script>
+
+
+<a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
+      environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  0.5;
+      dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  true" 
+      device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+          <a-sky color="#ECECEC" material="" geometry=""></a-sky>
+	
+	<a-assets timeout="10000">
+		<img id="grid" src="border.png" crossorigin="anonymous" />
+		<video id="video" loop="true" src="video/Bat.mp4" autoplay></video>
 	</a-assets>
 	
-	 <a-assets>
+	<a-plane
+		id = "video-border"
+		width = "12" height = "8"
+		position = "0 10 0"
+		color = "#440000"
+		video-controls>		
+		<a-video  
+			id = "video-display"
+			width="11" height="7" 
+			position="0 0 0.1"
+			src="#video">
+		</a-video>
+	</a-plane>
+	
+
+        <a-entity id="camera" 
+		  camera
+		  orbit-controls="
+                  autoRotate: true;
+		  autoRotateSpeed: 0;
+                  nableDamping: false;
+                  target: 0 0 0;
+                  minDistance: 15;
+                  maxDistance: 50;
+                  initialPosition: 0 2.5 13"
+                  mouse-cursor="" position="0 0 0" "></a-entity>
+				
+	<a-assets>
+         
+	  <img id="logo" src="assets/logo.png">
+	  <img id="mac" src="assets/macon1.jpg">
+	  <img id="im" src="assets/1.png">
+	  <img id="im1" src="assets/2.png">
+	  <img id="im2" src="assets/3.png">
+	  <img id="im3" src="assets/4.png">
+	  
+	</a-assets>
+		 
+		
+
+          <!-- adding assets to the program -->
+        <a-assets>
 		  
-	    <a-asset-item id="centre" src="models/foreman.obj"></a-asset-item>
+	    <a-asset-item id="centre" src="models/Measuring.obj"></a-asset-item>
 	    <img id="btexture" src="./assets/logo.png">
             	              	   
-            <a-asset-item id="fbac" src="./models/konteynrer.obj"></a-asset-item>
+            <a-asset-item id="fbac" src="./models/boite.obj"></a-asset-item>
             <img id="bac" src="./assets/1.png">
 
-            <a-asset-item id="fcap" src="./models/konteynrer.obj"></a-asset-item>
+            <a-asset-item id="fcap" src="./models/boite.obj"></a-asset-item>
             <img id="cap" src="./assets/2.png">
 
-            <a-asset-item id="f3eme" src="./models/konteynrer.obj"></a-asset-item>
+            <a-asset-item id="f3eme" src="./models/boite.obj"></a-asset-item>
             <img id="3eme" src="./assets/3.png">
 
-            <a-asset-item id="fgreta" src="./models/konteynrer.obj"></a-asset-item>
+            <a-asset-item id="fgreta" src="./models/boite.obj"></a-asset-item>
             <img id="greta" src="./assets/4.png">
+						
+	     <a-assets>
+   		 <a-asset-item id="tree" src="/models/scene.gltf"></a-asset-item>
+  	     </a-assets>
+
+  
                         
           </a-assets>
-	
-	 <a-entity id="fbac" position="7 2 7" scale="0.2 0.2 0.2" rotation="0 -45 0" obj-model="obj: #fbac" material="src: #bac">
-		
-	  </a-entity>
-		
-          <a-entity id="fcap" position="7 2 -7" scale="0.2 0.2 0.2" rotation="0 -45 0" obj-model="obj: #fcap" material="src: #cap">
-		
-	  </a-entity>
-		
-          <a-entity id="f3eme" position="-7 2 7" scale="0.2 0.2 0.2" rotation="0 +45 0" obj-model="obj: #f3eme" material="src: #3eme">
-			
-	 </a-entity>
-		
-          <a-entity id="fgreta" position="-7 2 -7" scale="0.2 0.2 0.2" rotation="0 +45 0" obj-model="obj: #fgreta" material="src: #greta">
-	  	
-	 </a-entity>
-		 
-	  <a-entity id="centre" scale="0.08 0.08 0.08" position="0 6.5 0" rotation="+90 0 +180" obj-model="obj: #centre" material="src: #btexture"</a-entity>
-	
 									   
          <a-entity position="7 5 6" rotation="0 -45 0">
 
@@ -103,28 +169,49 @@
 		</a-image>
 		
 	</a-entity>
+	
+	<a-entity gltf-model="#tree" position="-7 5 -6 "  cale="0.2 0.2 0.2" " rotation="0 0 0"></a-entity>
 				
-
-<!-- note: raycast issue (link still active) after walking through portal -->
-
-<a-sphere id="origin" radius="0.25" position="0 0 0" color="white"></a-sphere>
-
-<a-link	position="-8 1.6 -8" rotation="0 40 0"
-	href="portal-volcano.html" title="BAC PRO Organisation et Réalisation du Gros-Œuvre " image="#previewVolcano"></a-link>
-
-<a-link position="-5 1.6 -7" rotation="0 20 0"
-	href="portal-egypt.html" title="BAC PRO Menuiserie Aluminium Verre (MAV)" image="#previewEgypt"></a-link>
-
-<a-link position="0 1.6 -6" 
-	href="portal-forest.html" title="BAC PRO Aménagement et finition du bâtiment (AFB)" image="#previewForest"></a-link>
-
-<a-link position="5 1.6 -7" rotation="0 -20 0"
-	href="portal-arches.html" title="BAC PRO Ouvrages du Bâtiment : Métallerie (OBM)" image="#previewArches"></a-link>
-
-<a-link position="8 1.6 -8" rotation="0 -40 0"
-	href="portal-japan.html" title="BAC PRO Travaux Publics (TP) " image="#previewJapan"></a-link>
-
-</a-scene>
-
-</body>
+          <!-- loading the assets inside the enviroment -->
+              
+          <a-entity id="fbac" position="7 2 7" scale="0.2 0.2 0.2" rotation="0 -45 0" obj-model="obj: #fbac" material="src: #bac">
+		
+	  </a-entity>
+		
+          <a-entity id="fcap" position="7 2 -7" scale="0.2 0.2 0.2" rotation="0 -45 0" obj-model="obj: #fcap" material="src: #cap">
+		
+	  </a-entity>
+		
+          <a-entity id="f3eme" position="-7 2 7" scale="0.2 0.2 0.2" rotation="0 +45 0" obj-model="obj: #f3eme" material="src: #3eme">
+			
+	 </a-entity>
+		
+          <a-entity id="fgreta" position="-7 2 -7" scale="0.2 0.2 0.2" rotation="0 +45 0" obj-model="obj: #fgreta" material="src: #greta">
+	  	
+	 </a-entity>
+		 
+	  <a-entity id="centre" scale="0.08 0.08 0.08" position="0 6.5 0" rotation="+90 0 +180" obj-model="obj: #centre" material="src: #btexture">
+	  </a-entity>
+	
+	  
+		 
+	   <a-link position="7 1 7.5" scale="0.2 0.2 0.2" 
+	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS BAC PRO" image="#mac">
+	   </a-link>
+												 
+	    <a-link position="-7 1 7.5" scale="0.2 0.2 0.2" 
+	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS CAP" image="#mac">
+	    </a-link>
+											     
+	    <a-link position="7 1 -7.5" scale="0.2 0.2 0.2" 
+	 		href="bac-pro.html" title="DECOUVRIR LA 3PMET" image="#mac">
+	    </a-link>
+										   
+	    <a-link position="-7 1 -7.5" scale="0.2 0.2 0.2" 
+	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS GRETA" image="#mac">
+	    </a-link>	
+	   	 	
+     </a-scene>
+      
+  </body>
 </html>
