@@ -72,7 +72,7 @@ AFRAME.registerComponent('video-controls', {
 		<a-video  
 			id = "video-display"
 			width="11" height="7" 
-			position="0.05 0.05 0.5"
+			position="0 0 0.5"
 			src="#video">
 		</a-video>
 	</a-plane>
@@ -84,9 +84,9 @@ AFRAME.registerComponent('video-controls', {
                   autoRotate: true;
 		  autoRotateSpeed: 0;
                   nableDamping: false;
-                  target: 0 0 0;
-                  minDistance: 15;
-                  maxDistance: 50;
+                  target: 0 5 0;
+                  minDistance: 1;
+                  maxDistance: 90;
                   initialPosition: 0 0 0"
                   mouse-cursor="" position="0 0 0" "></a-entity>
 				
