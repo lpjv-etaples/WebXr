@@ -41,7 +41,7 @@
 				
 	<a-assets>
          
-	  <img id="logo" src="assets/logo.png">
+	  <img id="logo" src="models/konteynrer.mtl">
 	  <img id="mac" src="assets/macon1.jpg">
 	  <img id="im" src="assets/1.png">
 	  <img id="im1" src="assets/2.png">
@@ -55,27 +55,27 @@
           <!-- adding assets to the program -->
         <a-assets>
 		  
-	    <a-asset-item id="centre" src="models/Measuring.obj"></a-asset-item>
-	    <img id="btexture" src="./assets/logo.png">
-            	              	   
+	   
             <a-asset-item id="fbac" src="./models/konteynrer.obj"></a-asset-item>
-            <img id="bac" src="./assets/logo.png">
+            <img id="bac" src="./"models/konteynrer.mtl">
 
             <a-asset-item id="fcap" src="./models/konteynrer.obj"></a-asset-item>
-            <img id="cap" src="./assets/logo.png">
+            <img id="cap" src="./"models/konteynrer.mtl">
 
             <a-asset-item id="f3eme" src="./models/konteynrer.obj"></a-asset-item>
-            <img id="3eme" src="./assets/logo.png">
+            <img id="3eme" src="./"models/konteynrer.mtl">
 
             <a-asset-item id="fgreta" src="./models/konteynrer.obj"></a-asset-item>
-            <img id="greta" src="./assets/logo.png">
+            <img id="greta" src="./"models/konteynrer.mtl">
+		
+	    <a-asset-item id="chant" src="/models/sur_chantier.glb"></a-asset-item>
 			               
         </a-assets>
 	
-	 <a-assets>
+	
 	 	 	 	
-	 	<a-asset-item id="chant" src="/models/chantier/sur_chantier.glb"></a-asset-item>
-	</a-assets>
+	 	
+	
 									   
          <a-entity position="7 3 6.9" rotation="0 +90 0">
 
@@ -86,11 +86,9 @@
 		</a-image>
 		
 	</a-entity>
+			
 		
-		
-	<a-entity gltf-model="#tree" position="0 2 0 " rotation="0 0 0"></a-entity>
-	
-	<a-entity gltf-model="#chant" position="0 0 -10 " rotation="0 0 0"></a-entity>
+	<a-entity gltf-model="#chant" position="0 0 -10 " rotation="0 0 0" gltf-model="gltf: #fbac"></a-entity>
 									      
         <a-entity id="fbac" position="7 2 7" scale="1 1 1" rotation="0 0 0" obj-model="obj: #fbac" material="src: #bac"></a-entity>
 		
