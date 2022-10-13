@@ -120,19 +120,15 @@ AFRAME.registerComponent('video-controls', {
 
             <a-asset-item id="fgreta" src="./models/konteynrer.obj"></a-asset-item>
             <img id="greta" src="./assets/4.png">
-						
-	     <a-assets>
-   		 <a-asset-item id="tree" src="/models/scene.gltf"></a-asset-item>
-  	     </a-assets>
-								 
-	     <a-assets>
-   		 <a-asset-item id="chant" src="/models/chantier/chantier.gltf"></a-asset-item>
-  	     </a-assets>
-  
+				
+	   <a-asset-item id="tree" src="/models/scene.gltf"></a-asset-item>
+  	   		 
+	   <a-asset-item id="chant" src="/models/chantier/chantier.bin"></a-asset-item>
+  	       
                         
           </a-assets>
 									   
-         <a-entity position="7 5 6" rotation="0 -45 0">
+         <a-entity position="7 3 6.9" rotation="0 +90 0">
 
 		<a-image
 			 src="#im" 
@@ -149,19 +145,19 @@ AFRAME.registerComponent('video-controls', {
 											      
           <!-- loading the assets inside the enviroment -->
               
-          <a-entity id="fbac" position="7 2 7" scale="1 1 1" rotation="0 -45 0" obj-model="obj: #fbac" material="src: #bac">
+          <a-entity id="fbac" position="7 2 7" scale="1 1 1" rotation="0 0 0" obj-model="obj: #fbac" material="src: #bac">
 		
 	  </a-entity>
 		
-          <a-entity id="fcap" position="7 2 -7"  scale="1 1 1" rotation="0 -45 0" obj-model="obj: #fcap" material="src: #cap">
+          <a-entity id="fcap" position="7 2 -7"  scale="1 1 1" rotation="0 +90 0" obj-model="obj: #fcap" material="src: #cap">
          
 	  </a-entity>
 		
-          <a-entity id="f3eme" position="-7 2 7" scale="1 1 1" rotation="0 +45 0" obj-model="obj: #f3eme" material="src: #3eme">
+          <a-entity id="f3eme" position="-7 2 7" scale="1 1 1" rotation="0 +90 0" obj-model="obj: #f3eme" material="src: #3eme">
 			
 	 </a-entity>
 		
-          <a-entity id="fgreta" position="-7 2 -7" scale="1 1 1" rotation="0 +45 0" obj-model="obj: #fgreta" material="src: #greta">
+          <a-entity id="fgreta" position="-7 2 -7" scale="1 1 1" rotation="0 +90 0" obj-model="obj: #fgreta" material="src: #greta">
 	  	
 	 </a-entity>
 		 
@@ -170,20 +166,20 @@ AFRAME.registerComponent('video-controls', {
 	
 	  
 		 
-	   <a-link position="7 1 7.5" scale="0.4 0.4 0.4" 
+	   <a-link position="7 1 7.5" 
 	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS BAC PRO" image="#mac">
 	   </a-link>
 												 
-	    <a-link position="-7 1 7.5" scale="0.2 0.2 0.2" 
+	    <a-link position="-7 1 7.5" 
 	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS CAP" image="#mac">
 	    </a-link>
 											     
-	    <a-link position="7 1 -7.5" scale="0.2 0.2 0.2" 
+	    <a-link position="7 1 -7.5" 
 	 		href="bac-pro.html" title="DECOUVRIR LA 3PMET" image="#mac">
 	    </a-link>
 										   
-	    <a-link position="-7 1 -7.5" scale="0.2 0.2 0.2" 
-	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS GRETA" image="#mac">
+	    <a-link position="-7 1 -7.5"
+		    href="bac-pro.html" title="DECOUVRIR FORMATIONS GRETA" image="#mac">
 	    </a-link>	
 	   	 	
      </a-scene>
