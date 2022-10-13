@@ -24,25 +24,86 @@
         <img id="previewArches"   src="images/spherical/arches.jpg">
         <img id="previewJapan"    src="images/spherical/japan.jpg">
 	</a-assets>
+	
+	 <a-assets>
+		  
+	    <a-asset-item id="centre" src="models/foreman.obj"></a-asset-item>
+	    <img id="btexture" src="./assets/logo.png">
+            	              	   
+            <a-asset-item id="fbac" src="./models/konteynrer.obj"></a-asset-item>
+            <img id="bac" src="./assets/1.png">
+
+            <a-asset-item id="fcap" src="./models/konteynrer.obj"></a-asset-item>
+            <img id="cap" src="./assets/2.png">
+
+            <a-asset-item id="f3eme" src="./models/konteynrer.obj"></a-asset-item>
+            <img id="3eme" src="./assets/3.png">
+
+            <a-asset-item id="fgreta" src="./models/konteynrer.obj"></a-asset-item>
+            <img id="greta" src="./assets/4.png">
+                        
+          </a-assets>
+									   
+         <a-entity position="7 5 6" rotation="0 -45 0">
+
+		<a-image
+			 src="#im" 
+			 width="4" height="3"
+			 >
+		</a-image>
+		
+	</a-entity>
+		
+	<a-entity position="7 5 -6" rotation="0 -45 0">
+
+		<a-image
+			 src="#im1" 
+			 width="4" height="3"
+			 >
+		</a-image>
+			
+	</a-entity>
+		
+	<a-entity position="-7 5 6" rotation="0 +45 0">
+
+		<a-image
+			 src="#im2" 
+			 width="4" height="3"
+			 >
+		</a-image>
+						
+	</a-entity>
+		
+	<a-entity position="-7 5 -6 " rotation="0 +45 0">
+
+		<a-image
+			 src="#im3" 
+			 width="4" height="3"
+			 >
+			
+		</a-image>
+		
+	</a-entity>
+				
 
 <!-- note: raycast issue (link still active) after walking through portal -->
 
 <a-sphere id="origin" radius="0.25" position="0 0 0" color="white"></a-sphere>
 
 <a-link	position="-8 1.6 -8" rotation="0 40 0"
-	href="portal-volcano.html" title="Volcano" image="#previewVolcano"></a-link>
+	href="portal-volcano.html" title="BAC PRO Organisation et Réalisation du Gros-Œuvre " image="#previewVolcano"></a-link>
 
 <a-link position="-5 1.6 -7" rotation="0 20 0"
-	href="portal-egypt.html" title="Egypt" image="#previewEgypt"></a-link>
+	href="portal-egypt.html" title="BAC PRO Menuiserie Aluminium Verre (MAV)" image="#previewEgypt"></a-link>
 
 <a-link position="0 1.6 -6" 
-	href="portal-forest.html" title="Forest" image="#previewForest"></a-link>
+	href="portal-forest.html" title="BAC PRO Aménagement et finition du bâtiment (AFB)" image="#previewForest"></a-link>
 
 <a-link position="5 1.6 -7" rotation="0 -20 0"
-	href="portal-arches.html" title="Arches" image="#previewArches"></a-link>
+	href="portal-arches.html" title="BAC PRO Ouvrages du Bâtiment : Métallerie (OBM)" image="#previewArches"></a-link>
 
 <a-link position="8 1.6 -8" rotation="0 -40 0"
-	href="portal-japan.html" title="Japan" image="#previewJapan"></a-link>
+	href="portal-japan.html" title="BAC PRO Travaux Publics (TP) " image="#previewJapan"></a-link>
 
 </a-scene>
 
