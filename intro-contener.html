@@ -18,39 +18,6 @@
 </head>
 
 <body>
-	
-<script>
-
-AFRAME.registerComponent('video-controls', {
-	
-	init: function()
-	{
-		let video = document.querySelector("#video");
-
-		let videoDisplay = document.querySelector("#video-display");
-		let videoBorder  = document.querySelector("#video-border");
-		let videoMesh  = videoDisplay.getObject3D("mesh");
-		let borderMesh = videoBorder.getObject3D("mesh");
-		
-		videoBorder.addEventListener("mousedown", function(event)
-		{
-			if ( video.paused )
-			{
-				video.play();
-				borderMesh.material.color.set("#004400");
-			}
-			else
-			{
-				video.pause();
-				borderMesh.material.color.set("#440000");
-			}
-		});
-	}
-	
-});
-
-</script>
-
 
 <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
       environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  0.5;
@@ -58,24 +25,6 @@ AFRAME.registerComponent('video-controls', {
       device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
           <a-sky color="#ECECEC" material="" geometry=""></a-sky>
 	
-	<!--<a-assets timeout="10000">
-		<img id="grid" src="border.png" crossorigin="anonymous" />
-		<video id="video" loop="true" src="video/Bat.mp4" autoplay></video>
-	</a-assets>
-	
-	<a-plane
-		id = "video-border"
-		width = "12" height = "8"
-		position = "0 10 0"
-		color = "#440000"
-		video-controls>		
-		<a-video  
-			id = "video-display"
-			width="11" height="7" 
-			position="0 0 0.5"
-			src="#video">
-		</a-video>
-	</a-plane>-->
 	
 
         <a-entity id="camera" 
@@ -121,12 +70,12 @@ AFRAME.registerComponent('video-controls', {
             <a-asset-item id="fgreta" src="./models/konteynrer.obj"></a-asset-item>
             <img id="greta" src="./assets/logo.png">
 				
-	   <a-asset-item id="tree" src="/models/scene.gltf"></a-asset-item>
+	    <a-asset-item id="tree" src="/models/scene.gltf"></a-asset-item>
   	   		 
-	   <a-asset-item id="chant" src="/models/chantier/sur_chantier.glb"></a-asset-item>
+	    <a-asset-item id="chant" src="/models/chantier/sur_chantier.glb"></a-asset-item>
   	       
                         
-          </a-assets>
+        </a-assets>
 									   
          <a-entity position="7 3 6.9" rotation="0 +90 0">
 
@@ -142,26 +91,18 @@ AFRAME.registerComponent('video-controls', {
 	<a-entity gltf-model="#tree" position="0 2 0 "    rotation="0 0 0"></a-entity>
 	<a-entity gltf-model="#chant" position="0 0 -10 "  rotation="0 0 0"></a-entity>
 									      
-         <a-entity id="fbac" position="7 2 7" scale="1 1 1" rotation="0 0 0" obj-model="obj: #fbac" material="src: #bac">
+        <a-entity id="fbac" position="7 2 7" scale="1 1 1" rotation="0 0 0" obj-model="obj: #fbac" material="src: #bac"></a-entity>
 		
-	  </a-entity>
+         <a-entity id="fcap" position="7 2 -7"  scale="1 1 1" rotation="0 +90 0" obj-model="obj: #fcap" material="src: #cap"></a-entity>
 		
-          <a-entity id="fcap" position="7 2 -7"  scale="1 1 1" rotation="0 +90 0" obj-model="obj: #fcap" material="src: #cap">
-         
-	  </a-entity>
+         <a-entity id="f3eme" position="-7 2 7" scale="1 1 1" rotation="0 +90 0" obj-model="obj: #f3eme" material="src: #3eme"></a-entity>
 		
-          <a-entity id="f3eme" position="-7 2 7" scale="1 1 1" rotation="0 +90 0" obj-model="obj: #f3eme" material="src: #3eme">
-			
-	 </a-entity>
-		
-          <a-entity id="fgreta" position="-7 2 -7" scale="1 1 1" rotation="0 +90 0" obj-model="obj: #fgreta" material="src: #greta">
-	  	
-	 </a-entity>
+         <a-entity id="fgreta" position="-7 2 -7" scale="1 1 1" rotation="0 +90 0" obj-model="obj: #fgreta" material="src: #greta"></a-entity>
 		 
 	 
 	  
 		 
-	   <a-link position="7 1 7.5" 
+	  <!-- <a-link position="7 1 7.5" 
 	 		href="bac-pro.html" title="DECOUVRIR LES FORMATIONS BAC PRO" image="#mac">
 	   </a-link>
 												 
@@ -175,7 +116,7 @@ AFRAME.registerComponent('video-controls', {
 										   
 	    <a-link position="-7 1 -7.5"
 		    href="bac-pro.html" title="DECOUVRIR FORMATIONS GRETA" image="#mac">
-	    </a-link>	
+	    </a-link>-->	
 	   	 	
      </a-scene>
       
