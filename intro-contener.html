@@ -72,7 +72,7 @@ AFRAME.registerComponent('video-controls', {
 		<a-video  
 			id = "video-display"
 			width="11" height="7" 
-			position="0.05 0.05 0.1"
+			position="0.05 0.05 0.5"
 			src="#video">
 		</a-video>
 	</a-plane>
@@ -124,7 +124,10 @@ AFRAME.registerComponent('video-controls', {
 	     <a-assets>
    		 <a-asset-item id="tree" src="/models/scene.gltf"></a-asset-item>
   	     </a-assets>
-
+								 
+	     <a-assets>
+   		 <a-asset-item id="chant" src="/models/chantier/chantier.gltf"></a-asset-item>
+  	     </a-assets>
   
                         
           </a-assets>
@@ -142,7 +145,7 @@ AFRAME.registerComponent('video-controls', {
 	
 	
 	<a-entity gltf-model="#tree" position="0 2 0 "  scale="0.2 0.2 0.2"  rotation="0 0 0" animation-mixer></a-entity>
-	<a-entity gltf-model="#chant" position="0 0 -10 "  scale="0.2 0.2 0.2"  rotation="0 0 0" animation-mixer></a-entity>
+	<a-entity gltf-model="#chant" position="0 0 -10 "  scale="0.2 0.2 0.2" rotation="0 0 0" animation-mixer></a-entity>
 											      
           <!-- loading the assets inside the enviroment -->
               
