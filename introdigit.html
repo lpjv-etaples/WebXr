@@ -58,7 +58,7 @@ AFRAME.registerComponent('video-controls', {
       device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
           <a-sky color="#ECECEC" material="" geometry=""></a-sky>
 	
-	<a-assets>
+	<!--<a-assets>
 		<img id="grid" src="border.png" crossorigin="anonymous" />
 		<video id="video" loop="true" src="video/Bat.mp4" autoplay></video>
 	</a-assets>
@@ -75,20 +75,20 @@ AFRAME.registerComponent('video-controls', {
 			position="0 0 0.5"
 			src="#video">
 		</a-video>
-	</a-plane>
+	</a-plane>-->
 	
 
         <a-entity id="camera" 
 		  camera
 		  orbit-controls="
                   autoRotate: true;
-		  autoRotateSpeed: 0.2;
+		  autoRotateSpeed: 0;
                   nableDamping: false;
-                  target: 0 0 0;
+                  target: 0 2 0;
                   minDistance: 0;
                   maxDistance: 90;
-                  initialPosition: 0 2 15"
-                  mouse-cursor="" position="0 0 0" "></a-entity>
+                  initialPosition: 0 00"
+                  mouse-cursor="" position="0 2 -1" "></a-entity>
 				
 	<a-assets>
          
