@@ -11,6 +11,7 @@
 	<script src="js/aframe-curve-follow.js"></script>
 	<script src="js/components/link-controls.js"></script>
 	<script src="js/link-controls.js"></script>
+	<script src="js/link-extras.js"></script>
 	<script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
 	<script src="js/play-on-click.js"></script>
     	<script src="js/hide-on-play.js"></script> 
@@ -231,11 +232,11 @@ AFRAME.registerComponent('video-controls', {
 	
 	  
 		 
-	   <a-link position="5 1.5 5" scale="0.7 0.7 0.7" 
+	   <!--<a-link position="5 1.5 5" scale="0.4 0.4 0.4" 
 	 		href="Bacpro.html" title="DECOUVRIR LES FORMATIONS BAC PRO" image="#mac">
 	   </a-link>
 												 
-	    <a-link position="-5 1.5 5" scale="0.7 0.7 0.7" 
+	    <a-link position="-5 1.5 5" scale="0.4 0.4 0.4" 
 	 		href="3Pmet.html" title="DECOUVRIR LA 3PMET" image="#mac">
 	    </a-link>
 											     
@@ -245,7 +246,25 @@ AFRAME.registerComponent('video-controls', {
 										   
 	    <a-link position="-5 1.5 -5" scale="0.7 0.7 0.7" 
 	 		href="Fgreta.html" title="DECOUVRIR LES FORMATIONS GRETA" image="#mac">
+	    </a-link>-->
+	
+	
+	   <a-link position="5 1.5 5" scale="0.7 0.7 0.7" 
+	 		href="Bacpro.html" title="DECOUVRIR LES FORMATIONS BAC PRO" image="#mac" link-extras>
+	   </a-link>
+												 
+	    <a-link position="-5 1.5 5" scale="0.7 0.7 0.7" 
+	 		href="3Pmet.html" title="DECOUVRIR LA 3PMET" image="#mac" link-extras>
+	    </a-link>
+											     
+	    <a-link position="5 1.5 -5" scale="0.7 0.7 0.7" 
+	 		href="Fcap.html" title="DECOUVRIR LES FORMATIONS CAP DECOUVRIR LA 3PMET" image="#mac" link-extras>
+	    </a-link>
+										   
+	    <a-link position="-5 1.5 -5" scale="0.7 0.7 0.7" 
+	 		href="Fgreta.html" title="DECOUVRIR LES FORMATIONS GRETA" image="#mac" link-extras>
 	    </a-link>	
+	
 	   	 	
      </a-scene>
       
