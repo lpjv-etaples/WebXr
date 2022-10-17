@@ -7,8 +7,41 @@
     <script src="dist/aframe-master.js"></script>
   </head>
   <body>
-    <a-scene  environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;">
+    <a-scene  raycaster="far: 100; objects: [link];"  environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;">
       <a-sky color="#ECECEC" material="" geometry=""></a-sky>
+	    
+	 <a-entity 
+        id="player" 
+        position="0 0 0" 
+        player-move="controllerListenerId: #controller-data;
+                     navigationMeshClass: groundPlane;">
+        
+        <a-camera></a-camera>
+    
+        <a-entity 
+            id="controller-data" 
+            controller-listener="leftControllerId:  #left-controller; 
+                                 rightControllerId: #right-controller;">
+        </a-entity>
+
+        <a-entity 
+            id="left-controller"
+            oculus-touch-controls="hand: left">
+        </a-entity>
+
+        <!-- experiment with raycasting interval; slight performance improvement but jittery appearance in world -->
+        <a-entity
+            id="right-controller"
+            oculus-touch-controls="hand: right"
+            raycaster="objects: .raycaster-target; interval: 0;"
+            raycaster-extras="controllerListenerId: #controller-data; 
+                              beamImageSrc: #gradient; beamLength: 0.5;">
+        </a-entity>
+
+    </a-entity>
+	   
+	    
+	    
        <a-assets>
          
 	    <img id="logo" src="assets/logo.png">
