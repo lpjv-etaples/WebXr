@@ -61,6 +61,15 @@ AFRAME.registerComponent('video-controls', {
       device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
           <a-sky color="#ECECEC" material="" geometry=""></a-sky>
 	
+  <a-plane
+        width="100" height="100"
+        rotation="-90 0 0"
+        position="0 0.01 0"
+        visible="false"
+        class="groundPlane"
+        raycaster-target>
+   </a-plane>
+	
    <a-entity 
         id="player" 
         position="0 0 0" 
