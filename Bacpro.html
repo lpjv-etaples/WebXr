@@ -2,16 +2,108 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Gallerie BAC-PRO</title>
-    <meta name="description" content="Geometry Gallery - A-Frame">
-    <script src="dist/aframe-master.js"></script>
-    <script src="js/link-controls.js"></script>
+    <title>WebXR-LYCÉE DES MÉTIERS DU BÂTIMENT ET DES ÉNERGIES RENOUVELABLES JULES VERNE</title>
+	<script src="js/aframe-master-v1.3.0.min.js"></script>
+	<script src="js/aframe-environment-component.min.js"></script>
+	<script src="js/extended-wasd-controls.js"></script>
+	<script src="js/parser.js"></script>
+	<script src="js/aframe-parametric-curve.js"></script>
+	<script src="js/aframe-tube-geometry.js"></script>
+	<script src="js/aframe-curve-follow.js"></script>
+	<script src="js/components/link-controls.js"></script>
+	<script src="js/link-controls.js"></script>
+	<script src="js/link-extras.js"></script>
+	<script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+	<script src="js/play-on-click.js"></script>
+    	<script src="js/hide-on-play.js"></script> 
+	<script src="js/controller-listener.js"></script>
+    	<script src="js/player-move.js"></script>
+    	<script src="js/raycaster-extras.js"></script>
+        <script src="dist/aframe-master.js"></script>
+        <script src="js/link-controls.js"></script>
+	  
   </head>
 	
   <body>
-    <a-scene environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  raycaster="far: 100; objects: [link];">
-      <a-sky color="#ECECEC" material="" geometry=""></a-sky>
-   
+	  
+  <script>
+
+AFRAME.registerComponent('video-controls', {
+	
+	init: function()
+	{
+		let video = document.querySelector("#video");
+
+		let videoDisplay = document.querySelector("#video-display");
+		let videoBorder  = document.querySelector("#video-border");
+		let videoMesh  = videoDisplay.getObject3D("mesh");
+		let borderMesh = videoBorder.getObject3D("mesh");
+		
+		videoBorder.addEventListener("mousedown", function(event)
+		{
+			if ( video.paused )
+			{
+				video.play();
+				borderMesh.material.color.set("#004400");
+			}
+			else
+			{
+				video.pause();
+				borderMesh.material.color.set("#440000");
+			}
+		});
+	}
+	
+});
+
+</script>
+
+
+<a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
+      environment="groundColor:  #f6d7b0;  groundColor2:  #f2d2a9;  playArea:  0.5;
+      dressingVariance:  [object Object]" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="enabled:  true" 
+      device-orientation-permission-ui="enabled: true" fog="color: #74ab90; far: 100; density: 0" visible="" cursor="rayOrigin: mouse" raycaster="objects: #ball1">
+          <a-sky color="#ECECEC" material="" geometry=""></a-sky>
+	
+  <a-plane
+        width="100" height="100"
+        rotation="-90 0 0"
+        position="0 0.01 0"
+        visible="false"
+        class="groundPlane"
+        raycaster-target>
+   </a-plane>
+	
+   <a-entity 
+        id="player" 
+        position="0 0 0" 
+        player-move="controllerListenerId: #controller-data;
+                     navigationMeshClass: groundPlane;">
+        
+        <a-camera></a-camera>
+    
+        <a-entity 
+            id="controller-data" 
+            controller-listener="leftControllerId:  #left-controller; 
+                                 rightControllerId: #right-controller;">
+        </a-entity>
+
+        <a-entity 
+            id="left-controller"
+            oculus-touch-controls="hand: left">
+        </a-entity>
+
+        <!-- experiment with raycasting interval; slight performance improvement but jittery appearance in world -->
+        <a-entity
+            id="right-controller"
+            oculus-touch-controls="hand: right"
+            raycaster="objects: .raycaster-target; interval: 0;"
+            raycaster-extras="controllerListenerId: #controller-data; 
+                              beamImageSrc: #gradient; beamLength: 0.5;">
+        </a-entity>
+
+    </a-entity>
+	
 		    
        <a-assets>
          
@@ -188,13 +280,13 @@
       </a-entity>
 	    
       <a-link position="-2.5 0 1.5" scale="0.1 0.1 0.1" 
-	 		href="bac-afb.html" title="BAC AMENAGEMENT FINITION BATIMENT" image="#mac"></a-link>	
+	 		href="bac-afb.html" title="BAC1 AMENAGEMENT FINITION BATIMENT" image="#mac" link-extras></a-link>	
       <a-link position="-2.5 0 0.5" scale="0.5 0.5 0.5" 
-	 		href="bac-afb.html" title="BAC AMENAGEMENT FINITION BATIMENT" image="#mac"></a-link>	
+	 		href="bac-afb.html" title="BAC2 AMENAGEMENT FINITION BATIMENT" image="#mac" link-extras></a-link>	
       <a-link position="2.5 0 1.5" scale="0.5 0.5 0.5" 
-	 		href="bac-afb.html" title="BAC AMENAGEMENT FINITION BATIMENT" image="#mac"></a-link>
+	 		href="bac-afb.html" title="BAC3 AMENAGEMENT FINITION BATIMENT" image="#mac" link-extras></a-link>
       <a-link position="2.5 0 0.5" scale="0.5 0.5 0.5"  
-	 		href="bac-afb.html" title="BAC AMENAGEMENT FINITION BATIMENT" image="#mac"></a-link>
+	 		href="bac-afb.html" title="BAC4 AMENAGEMENT FINITION BATIMENT" image="#mac" link-extras></a-link>
 	    
    </a-scene>
   </body>
