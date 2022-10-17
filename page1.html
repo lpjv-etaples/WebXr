@@ -21,6 +21,8 @@
 	<script src="js/camera-fade.js"></script>
 	<script src="js/raycaster-graphics.js"></script>
 	<script src="js/raycaster-controller-grabber.js"></script>
+	<script src="js/physx.release.js"></script>
+    	<script src="js/physics.js"></script>
 	
 </head>
 
@@ -56,6 +58,29 @@ AFRAME.registerComponent('video-controls', {
 	
 });
 
+</script>
+	
+<script>
+
+AFRAME.registerComponent("physics-grab", {
+    init: function () 
+    {
+        let self = this;
+
+        this.el.addEventListener("raycaster-grabbed", function() {
+           self.el.addState("grabbed"); 
+        });
+
+        this.el.addEventListener("raycaster-released", function() {
+           self.el.removeState("grabbed"); 
+        });
+    },
+
+    tick: function()
+    {
+
+    }
+});
 </script>
 
 
@@ -223,8 +248,10 @@ AFRAME.registerComponent('video-controls', {
 				
           <!-- loading the assets inside the enviroment -->
               
-          <a-entity id="fbac" position="7 2 6.2" scale="0.2 0.2 0.2" rotation="0 +180 0" obj-model="obj: #fbac" material="src: #bac">
-		
+          <a-entity physx-body="type: dynamic; highPrecision: true;"
+		raycaster-target="canGrab: true;"
+		physics-grab
+                id="fbac" position="7 2 6.2" scale="0.2 0.2 0.2" rotation="0 +180 0" obj-model="obj: #fbac" material="src: #bac">
 	  </a-entity>
 		
           <a-entity id="fcap" position="7 2 -6.2" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fcap" material="src: #cap">
