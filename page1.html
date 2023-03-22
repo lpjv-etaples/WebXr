@@ -189,7 +189,7 @@ AFRAME.registerComponent("physics-grab", {
         <a-assets>
 		  
 	    <a-asset-item id="centre" src="models/Measuring.obj"></a-asset-item>
-	    <img id="btexture" src="assets/Measuring-tape-obj_0.jpg"">
+	    <img id="btexture" src="assets/Measuring-tape-obj_0.jpg">
             	              	   
             <a-asset-item id="fbac" src="./models/boite.obj"></a-asset-item>
             <img id="bac" src="./assets/1.png">
@@ -201,6 +201,15 @@ AFRAME.registerComponent("physics-grab", {
             <img id="3eme" src="./assets/3.png">
 
             <a-asset-item id="fgreta" src="./models/boite.obj"></a-asset-item>
+            <img id="greta" src="./assets/4.png">
+						
+	    <a-asset-item id="fcap1" src="./models/boite.obj"></a-asset-item>
+            <img id="cap" src="./assets/2.png">
+
+            <a-asset-item id="fcap2" src="./models/boite.obj"></a-asset-item>
+            <img id="3eme" src="./assets/3.png">
+
+            <a-asset-item id="fbac1" src="./models/boite.obj"></a-asset-item>
             <img id="greta" src="./assets/4.png">
                         
           </a-assets>
@@ -251,20 +260,30 @@ AFRAME.registerComponent("physics-grab", {
           <a-entity physx-body="type: dynamic; highPrecision: true;"
 		raycaster-target="canGrab: true;"
 		physics-grab
-                id="fbac" position="7 2 6.2" scale="0.2 0.2 0.2" rotation="0 +180 0" obj-model="obj: #fbac" material="src: #bac">
+                id="fbac" position="5 2 5" scale="0.2 0.2 0.2" rotation="0 +45 0" obj-model="obj: #fbac" material="src: #bac">
 	  </a-entity>
 		
-          <a-entity id="fcap" position="7 2 -6.2" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fcap" material="src: #cap">
+          <a-entity id="fcap" position="7 2 0" scale="0.2 0.2 0.2" rotation="0 +90 0" obj-model="obj: #fcap" material="src: #cap">
 		
 	  </a-entity>
 		
-          <a-entity id="f3eme" position="-7 2 6.2" scale="0.2 0.2 0.2" rotation="0 +180 0" obj-model="obj: #f3eme" material="src: #3eme">
+          <a-entity id="f3eme" position="5 2 5" scale="0.2 0.2 0.2" rotation="0 -45 0" obj-model="obj: #f3eme" material="src: #3eme">
 			
 	 </a-entity>
 		
-          <a-entity id="fgreta" position="-7 2 -6.2" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fgreta" material="src: #greta">
-	  	
+          <a-entity id="fgreta" position="0 2 7" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fgreta" material="src: #greta">
+		  	
 	 </a-entity>
+																	 
+	 <a-entity id="fcap1" position="-5 2 5" scale="0.2 0.2 0.2" rotation="0 -45 0" obj-model="obj: #fcap" material="src: #cap1">
+		
+	  </a-entity>
+		
+          <a-entity id="fcap2" position="-7 2 0" scale="0.2 0.2 0.2" rotation="0 +180 0" obj-model="obj: #f3eme" material="src: #3cap2">
+			
+	 </a-entity>
+		
+          <a-entity id="fbac1" position="-5 2 -5" scale="0.2 0.2 0.2" rotation="0 0 0" obj-model="obj: #fgreta" material="src: #bac1">
 		 
 	  <!--<a-entity id="centre" scale="0.06 0.06 0.06" position="0 3 0" rotation="+85 0 +180" obj-model="obj: #centre" material="src: #btexture">
 	  </a-entity>-->
